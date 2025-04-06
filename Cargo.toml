@@ -1,0 +1,10 @@
+[package]
+name = "zgpu"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wgpu = "24.0.1"
+winit = "0.30.9"
+glm = "0.2.3"
+image = "0.25.5"
