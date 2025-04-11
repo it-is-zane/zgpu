@@ -1,67 +1,85 @@
-mod model;
-mod renderer_backend;
 mod state;
 mod util;
 
-use model::game_object::Object;
-use state::State;
-
-struct World {
-    quads: Vec<Object>,
-    tris: Vec<Object>,
-}
-
-impl World {
-    fn new() -> Self {
-        World {
-            quads: Vec::new(),
-            tris: Vec::new(),
-        }
-    }
-
-    fn update(&mut self, dt: f32) {
-        for i in 0..self.tris.len() {
-            self.tris[i].angle = self.tris[i].angle + 0.001 * dt;
-            if self.tris[i].angle > 360.0 {
-                self.tris[i].angle -= 360.0;
-            }
-        }
-    }
-}
-
 struct App<'a> {
-    state: Option<State<'a>>,
-    world: World,
+    state: state::State,
+    window: Option<std::sync::Arc<winit::window::Window>>,
+    surface: Option<wgpu::Surface<'a>>,
+    sdf_curve_pipeline: state::SdfCurve,
+    texture: wgpu::Texture,
+    texture_view: wgpu::TextureView,
+    render_sub_view: state::RenderSubView,
 }
+
 impl App<'_> {
     fn new() -> Self {
-        let world = World::new();
+        let state = util::insync(state::State::new(None));
+        let sdf_curve_pipeline = state::SdfCurve::new(&state.device);
 
-        Self { state: None, world }
+        let texture = state.device.create_texture(&wgpu::TextureDescriptor {
+            label: Some("sub view"),
+            size: wgpu::Extent3d {
+                width: 64,
+                height: 64,
+                depth_or_array_layers: 1,
+            },
+            mip_level_count: 1,
+            sample_count: 1,
+            dimension: wgpu::TextureDimension::D2,
+            format: wgpu::TextureFormat::Rgba8UnormSrgb,
+            usage: wgpu::TextureUsages::RENDER_ATTACHMENT
+                | wgpu::TextureUsages::COPY_DST
+                | wgpu::TextureUsages::RENDER_ATTACHMENT
+                | wgpu::TextureUsages::TEXTURE_BINDING,
+            view_formats: &[],
+        });
+
+        let texture_view = texture.create_view(&wgpu::TextureViewDescriptor::default());
+
+        let render_sub_view = state::RenderSubView::new(&state.device, &texture_view);
+
+        Self {
+            state,
+            window: None,
+            surface: None,
+            sdf_curve_pipeline,
+            texture,
+            texture_view,
+            render_sub_view,
+        }
     }
 }
 
 impl winit::application::ApplicationHandler for App<'_> {
     fn resumed(&mut self, event_loop: &winit::event_loop::ActiveEventLoop) {
-        let window = event_loop
-            .create_window(winit::window::WindowAttributes::default().with_transparent(true))
-            .unwrap();
+        let window = std::sync::Arc::new(
+            event_loop
+                .create_window(winit::window::WindowAttributes::default())
+                .unwrap(),
+        );
 
         window.set_title("my yet to be named daw");
         _ = window.request_inner_size(winit::dpi::PhysicalSize::new(600, 600));
 
-        let mut state = util::insync(State::new(window));
-        self.world.quads.push(Object {
-            position: glm::vec3(0.5, 0.0, 0.0),
-            angle: 0.0,
-        });
-        self.world.tris.push(Object {
-            position: glm::vec3(0.0, 0.0, 0.0),
-            angle: 0.0,
-        });
-        state.build_ubos_for_objects(1, wgpu::ShaderStages::FRAGMENT);
+        self.window = Some(window.clone());
 
-        self.state = Some(state);
+        let surface = self.state.instance.create_surface(window.clone()).unwrap();
+
+        surface.configure(
+            &self.state.device,
+            &wgpu::SurfaceConfiguration {
+                usage: wgpu::TextureUsages::RENDER_ATTACHMENT,
+                format: wgpu::TextureFormat::Rgba8UnormSrgb,
+                width: window.inner_size().width,
+                height: window.inner_size().height,
+                present_mode: wgpu::PresentMode::Fifo,
+                desired_maximum_frame_latency: 2,
+                alpha_mode: wgpu::CompositeAlphaMode::Opaque,
+                view_formats: Vec::new(),
+            },
+        );
+
+        self.surface = Some(surface);
     }
 
     fn window_event(
@@ -72,23 +90,54 @@ impl winit::application::ApplicationHandler for App<'_> {
     ) {
         match event {
             winit::event::WindowEvent::RedrawRequested => {
-                if let Some(state) = self.state.as_mut() {
-                    self.world.update(1.0);
+                if let (Some(window), Some(surface)) = (self.window.as_mut(), self.surface.as_mut())
+                {
+                    let surface_texture = surface.get_current_texture().unwrap();
+                    let texture_view = surface_texture
+                        .texture
+                        .create_view(&wgpu::TextureViewDescriptor::default());
 
-                    state
-                        .render(&self.world.quads, &self.world.tris)
-                        .unwrap_or_else(|e| eprintln!("i know you!{:?}", e));
+                    self.sdf_curve_pipeline
+                        .upload_uniform(&self.state.queue, &glm::vec2(64.0, 64.0));
 
-                    // state.window.request_redraw();
+                    self.state.render(&self.texture_view, |mut rp, state| {
+                        self.sdf_curve_pipeline.render(&mut rp);
+                    });
+
+                    self.render_sub_view.upload_uniform(
+                        &self.state.queue,
+                        &glm::Vec2::new(
+                            window.inner_size().width as f32,
+                            window.inner_size().height as f32,
+                        ),
+                    );
+
+                    self.state.render(&texture_view, |mut rp, state| {
+                        self.render_sub_view.render(&mut rp);
+                    });
+
+                    window.pre_present_notify();
+                    surface_texture.present();
                 }
             }
             winit::event::WindowEvent::Resized(size) => {
-                if let Some(state) = self.state.as_mut() {
-                    state.resize(size);
+                if let Some(surface) = self.surface.as_ref() {
+                    surface.configure(
+                        &self.state.device,
+                        &wgpu::SurfaceConfiguration {
+                            usage: wgpu::TextureUsages::RENDER_ATTACHMENT,
+                            format: wgpu::TextureFormat::Rgba8UnormSrgb,
+                            width: size.width,
+                            height: size.height,
+                            present_mode: wgpu::PresentMode::Fifo,
+                            desired_maximum_frame_latency: 2,
+                            alpha_mode: wgpu::CompositeAlphaMode::Opaque,
+                            view_formats: Vec::new(),
+                        },
+                    );
                 }
             }
             winit::event::WindowEvent::CloseRequested => {
-                self.state = None;
                 event_loop.exit();
             }
             winit::event::WindowEvent::KeyboardInput {
@@ -101,17 +150,15 @@ impl winit::application::ApplicationHandler for App<'_> {
                 ..
             } => match c {
                 winit::keyboard::KeyCode::KeyF => {
-                    if let Some(state) = self.state.as_mut() {
-                        match state.window.fullscreen() {
-                            Some(_) => state.window.set_fullscreen(None),
-                            None => state
-                                .window
+                    if let Some(window) = self.window.as_mut() {
+                        match window.fullscreen() {
+                            Some(_) => window.set_fullscreen(None),
+                            None => window
                                 .set_fullscreen(Some(winit::window::Fullscreen::Borderless(None))),
                         }
                     }
                 }
                 winit::keyboard::KeyCode::KeyQ => {
-                    self.state = None;
                     event_loop.exit();
                 }
                 _ => (),
