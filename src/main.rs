@@ -13,7 +13,7 @@ struct App<'a> {
 
 impl App<'_> {
     fn new() -> Self {
-        let state = util::insync(state::State::new(None));
+        let mut state = util::insync(state::State::new(None));
         let sdf_curve_pipeline = state::SdfCurve::new(&state.device);
 
         let texture = state.device.create_texture(&wgpu::TextureDescriptor {
@@ -37,6 +37,12 @@ impl App<'_> {
         let texture_view = texture.create_view(&wgpu::TextureViewDescriptor::default());
 
         let render_sub_view = state::RenderSubView::new(&state.device, &texture_view);
+
+        sdf_curve_pipeline.upload_uniform(&state.queue, &glm::vec2(64.0, 64.0));
+
+        state.render(&texture_view, |mut rp, state| {
+            sdf_curve_pipeline.render(&mut rp);
+        });
 
         Self {
             state,
@@ -96,13 +102,6 @@ impl winit::application::ApplicationHandler for App<'_> {
                     let texture_view = surface_texture
                         .texture
                         .create_view(&wgpu::TextureViewDescriptor::default());
-
-                    self.sdf_curve_pipeline
-                        .upload_uniform(&self.state.queue, &glm::vec2(64.0, 64.0));
-
-                    self.state.render(&self.texture_view, |mut rp, state| {
-                        self.sdf_curve_pipeline.render(&mut rp);
-                    });
 
                     self.render_sub_view.upload_uniform(
                         &self.state.queue,
