@@ -1,5 +1,3 @@
-use wgpu::util::RenderEncoder;
-
 pub struct State {
     pub instance: wgpu::Instance,
     pub device: wgpu::Device,
