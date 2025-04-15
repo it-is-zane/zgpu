@@ -19,8 +19,8 @@ impl App<'_> {
         let texture = state.device.create_texture(&wgpu::TextureDescriptor {
             label: Some("sub view"),
             size: wgpu::Extent3d {
-                width: 64,
-                height: 64,
+                width: 256,
+                height: 256,
                 depth_or_array_layers: 1,
             },
             mip_level_count: 1,
@@ -38,7 +38,7 @@ impl App<'_> {
 
         let render_sub_view = state::RenderSubView::new(&state.device, &texture_view);
 
-        sdf_curve_pipeline.upload_uniform(&state.queue, &glm::vec2(64.0, 64.0));
+        sdf_curve_pipeline.upload_uniform(&state.queue, &glm::vec2(256.0, 256.0));
 
         state.render(&texture_view, |mut rp, state| {
             sdf_curve_pipeline.render(&mut rp);
@@ -60,7 +60,10 @@ impl winit::application::ApplicationHandler for App<'_> {
     fn resumed(&mut self, event_loop: &winit::event_loop::ActiveEventLoop) {
         let window = std::sync::Arc::new(
             event_loop
-                .create_window(winit::window::WindowAttributes::default())
+                .create_window(
+                    winit::window::WindowAttributes::default()
+                        .with_min_inner_size(winit::dpi::LogicalSize::new(256, 256)),
+                )
                 .unwrap(),
         );
 

@@ -97,6 +97,35 @@ fn sdf_bezier(pos: vec2<f32>, A: vec2<f32>, B: vec2<f32>, C: vec2<f32>) -> f32 {
     return sqrt(res);
 }
 
+fn sdf_quadratic_circle(pin: vec2<f32>) -> f32 {
+    var p = abs(pin);
+
+    if (p.y > p.x ) {
+        p = p.yx;
+    }
+
+    let a = p.x - p.y;
+    let b = p.x + p.y;
+    let c = (2.0 * b - 1.0) / 3.0;
+    var h = a * a + c * c * c;
+
+    var t: f32;
+
+    if (h > 0.0) {
+        h = sqrt(h);
+        t = sign(h - a) * pow(abs(h - a), 1.0 / 3.0) - pow(h + a, 1.0 / 3.0); 
+    } else {
+        let z = sqrt(-c);
+        let v = acos(a / (c * z)) / 3.0;
+        t = -z * (cos(v) + sin(v) * 1.732050808);
+    }
+
+    t *= 0.5;
+    let w = vec2(-t, t) + 0.75 - t * t - p;
+
+    return length(w) * sign(a * a * 0.5 + b - 1.5);
+}
+
 @vertex
 fn vs_main(
     @builtin(vertex_index) in_vertex_index: u32,
@@ -121,12 +150,16 @@ fn fs_main(in: VertexOutput) -> @location(0) vec4<f32> {
     let uv = (in.color.xy + vec2(1.0)) / 2.0;
     let screen_coord = uv * screen_size;
 
-    var d = sdf_bezier(
+    // var d = sdf_bezier(
+    //     in.color.xy * screen_size / min(screen_size.x, screen_size.y),
+    //     vec2(-1.0, -1.0) * 0.9,
+    //     vec2(0.0, 3.0) * 0.9,
+    //     vec2(1.0, -1.0) * 0.9,
+    // );
+
+    var d = abs(sdf_quadratic_circle(
         in.color.xy * screen_size / min(screen_size.x, screen_size.y),
-        vec2(-1.0, -1.0) * 0.9,
-        vec2(0.0, 3.0) * 0.9,
-        vec2(1.0, -1.0) * 0.9,
-    );
+    ));
 
     // d = (d * 25.0) % 1.0;
     // d = pow(d, 0.1);

@@ -126,6 +126,6 @@ fn fs_main(in: VertexOutput) -> @location(0) vec4<f32> {
     let screen_coord = uv * screen_size;
 
     // return vec4(screen_coord, vec2(0.0));
-    return textureSample(texture_binding, sampler_binding, screen_coord / 64.0);
+    return textureSample(texture_binding, sampler_binding, screen_coord / 256.0);
     
 }
