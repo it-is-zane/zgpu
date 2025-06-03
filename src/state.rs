@@ -1,95 +1,47 @@
-pub struct State {
-    pub instance: wgpu::Instance,
-    pub device: wgpu::Device,
-    pub queue: wgpu::Queue,
-}
+impl crate::compositor::Viewport for SdfCurve {
+    fn set_resolution(&mut self, width: u32, height: u32) {
+        self.upload_view_size(&self.queue, &glm::vec2(width as f32, height as f32));
 
-impl State {
-    pub async fn new(surface: Option<&wgpu::Surface<'_>>) -> Self {
-        let instance_descriptor = wgpu::InstanceDescriptor {
-            backends: wgpu::Backends::all(),
-            ..Default::default()
-        };
-
-        let instance = wgpu::Instance::new(&instance_descriptor);
-
-        let adapter_descriptor = wgpu::RequestAdapterOptionsBase {
-            power_preference: wgpu::PowerPreference::default(),
-            compatible_surface: surface,
-            force_fallback_adapter: false,
-        };
-
-        let adapter = instance.request_adapter(&adapter_descriptor).await.unwrap();
-
-        let device_descriptor = wgpu::DeviceDescriptor {
-            required_features: wgpu::Features::empty(),
-            required_limits: wgpu::Limits::default(),
-            label: Some("Device"),
-            memory_hints: wgpu::MemoryHints::Performance,
-        };
-
-        let (device, queue) = adapter
-            .request_device(&device_descriptor, None)
-            .await
-            .unwrap();
-
-        Self {
-            instance,
-            device,
-            queue,
-        }
-    }
-}
-
-/// Render
-impl State {
-    pub fn render<F: Fn(wgpu::RenderPass, &mut State)>(&mut self, view: &wgpu::TextureView, f: F) {
-        let command_encoder_descriptor = wgpu::CommandEncoderDescriptor {
-            label: Some("Render Encoder"),
-        };
-
-        let mut command_encoder = self
-            .device
-            .create_command_encoder(&command_encoder_descriptor);
-
-        let color_attachment = wgpu::RenderPassColorAttachment {
-            view,
-            resolve_target: None,
-            ops: wgpu::Operations {
-                load: wgpu::LoadOp::Clear(wgpu::Color {
-                    r: 0.0,
-                    g: 0.0,
-                    b: 0.0,
-                    a: 0.0,
-                }),
-                store: wgpu::StoreOp::Store,
+        self.texture = self.device.create_texture(&wgpu::TextureDescriptor {
+            label: Some("sdf texture"),
+            size: wgpu::Extent3d {
+                width: 256,
+                height: 256,
+                depth_or_array_layers: 1,
             },
-        };
+            mip_level_count: 1,
+            sample_count: 1,
+            dimension: wgpu::TextureDimension::D2,
+            format: wgpu::TextureFormat::Rgba8UnormSrgb,
+            usage: wgpu::TextureUsages::RENDER_ATTACHMENT
+                | wgpu::TextureUsages::COPY_DST
+                | wgpu::TextureUsages::RENDER_ATTACHMENT
+                | wgpu::TextureUsages::TEXTURE_BINDING,
+            view_formats: &[],
+        });
 
-        let render_pass_descriptor = wgpu::RenderPassDescriptor {
-            label: Some("Renderpass"),
-            color_attachments: &[Some(color_attachment)],
-            depth_stencil_attachment: None,
-            timestamp_writes: None,
-            occlusion_query_set: None,
-        };
+        self.view = self
+            .texture
+            .create_view(&wgpu::TextureViewDescriptor::default());
+    }
 
-        f(
-            command_encoder.begin_render_pass(&render_pass_descriptor),
-            self,
-        );
-
-        self.queue.submit([command_encoder.finish()]);
+    fn get_view(&self) -> wgpu::TextureView {
+        self.view.clone()
     }
 }
 
 pub struct SdfCurve {
+    device: wgpu::Device,
+    queue: wgpu::Queue,
     pipeline: wgpu::RenderPipeline,
     buffer: wgpu::Buffer,
     bind_group: wgpu::BindGroup,
+    rect_uniform: wgpu::Buffer,
+    texture: wgpu::Texture,
+    view: wgpu::TextureView,
 }
 impl SdfCurve {
-    pub fn new(device: &wgpu::Device) -> Self {
+    pub fn new(device: wgpu::Device, queue: wgpu::Queue, rect_uniform: wgpu::Buffer) -> Self {
         let module = &device.create_shader_module(wgpu::include_wgsl!("sdf_shader.wgsl"));
 
         let bind_group_layout =
@@ -176,21 +128,72 @@ impl SdfCurve {
             cache: None,
         });
 
+        let texture = device.create_texture(&wgpu::TextureDescriptor {
+            label: Some("sdf texture"),
+            size: wgpu::Extent3d {
+                width: 256,
+                height: 256,
+                depth_or_array_layers: 1,
+            },
+            mip_level_count: 1,
+            sample_count: 1,
+            dimension: wgpu::TextureDimension::D2,
+            format: wgpu::TextureFormat::Rgba8UnormSrgb,
+            usage: wgpu::TextureUsages::RENDER_ATTACHMENT
+                | wgpu::TextureUsages::COPY_DST
+                | wgpu::TextureUsages::RENDER_ATTACHMENT
+                | wgpu::TextureUsages::TEXTURE_BINDING,
+            view_formats: &[],
+        });
+
+        let view = texture.create_view(&wgpu::TextureViewDescriptor::default());
+
         Self {
+            device,
+            queue,
             pipeline,
             buffer,
             bind_group,
+            rect_uniform,
+            texture,
+            view,
         }
     }
 
-    pub fn upload_uniform(&self, queue: &wgpu::Queue, size: &glm::Vec2) {
+    pub fn upload_view_size(&self, queue: &wgpu::Queue, size: &glm::Vec2) {
         queue.write_buffer(&self.buffer, 0, unsafe { crate::util::as_u8_slice(size) });
     }
 
-    pub fn render(&self, render_pass: &mut wgpu::RenderPass) {
+    pub fn set_rect(&self, rect: &glm::Vec4) {
+        self.queue.write_buffer(&self.rect_uniform, 0, unsafe {
+            crate::util::as_u8_slice(rect)
+        });
+    }
+
+    pub fn render(&self) {
+        let mut ce = self
+            .device
+            .create_command_encoder(&wgpu::CommandEncoderDescriptor::default());
+
+        let mut render_pass = ce.begin_render_pass(&wgpu::RenderPassDescriptor {
+            label: None,
+            color_attachments: &[Some(wgpu::RenderPassColorAttachment {
+                view: &self.view,
+                resolve_target: None,
+                ops: wgpu::Operations::default(),
+            })],
+            depth_stencil_attachment: None,
+            timestamp_writes: None,
+            occlusion_query_set: None,
+        });
+
         render_pass.set_pipeline(&self.pipeline);
         render_pass.set_bind_group(0, &self.bind_group, &[]);
         render_pass.draw(0..3, 0..1);
+
+        drop(render_pass);
+
+        self.queue.submit([ce.finish()]);
     }
 }
 

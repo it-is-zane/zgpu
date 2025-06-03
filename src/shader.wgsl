@@ -1,7 +1,6 @@
 @group(0) @binding(0) var myTexture: texture_2d<f32>;
 @group(0) @binding(1) var mySampler: sampler;
-
-@group(1) @binding(0) var<uniform> model: mat4x4<f32>;
+@group(0) @binding(2) var<uniform> time: f32;
 
 
 struct Vertex {
@@ -104,11 +103,25 @@ fn textureSampleBicubic(tex: texture_2d<f32>, tex_sampler: sampler, texCoords_or
     return mix(mix(sample3, sample2, vec4(sx)), mix(sample1, sample0, vec4(sx)), vec4(sy));
 }
 
+fn blur(tex: texture_2d<f32>, samp: sampler, uv: vec2<f32>) -> vec3<f32> {
+  var tot = vec3(0.0);
+
+  for (var j = 0.0; j < 9.0; j += 1.0) { 
+    for (var i = 0.0; i < 9.0; i += 1.0) {
+      let st = (uv + vec2(i - 4.0, j - 4.0) / vec2<f32>(textureDimensions(tex).xy));
+      let co = textureSampleBicubic(tex, samp, vec2(st.x, st.y)).xyz;
+        tot += pow(co, vec3(2.2));
+    }
+  }
+
+  return pow(tot / 81.0, vec3(1.0/2.2));
+}
+
 @vertex
 fn vs_main(vertex: Vertex) -> VertexPayload {
   var out: VertexPayload;
 
-  out.position = model * vec4<f32>(vertex.position, 1.0);
+  out.position = vec4<f32>(vertex.position, 1.0);
   out.color = vertex.color;
   out.textureCoord = vec2<f32>(vertex.position.xy);
 
@@ -118,15 +131,26 @@ fn vs_main(vertex: Vertex) -> VertexPayload {
 @fragment
 fn fs_main(in: VertexPayload) -> @location(0) vec4<f32> {
   var rgba = textureSampleBicubic(myTexture, mySampler, in.color.xy);
-  var lab = linear_srgb_to_oklab(rgba.rgb);
-  var lch = lab_to_lch(lab);
-  lch.x = 1.0 - lch.x;
-  // lch.y = 1.0 - lch.y;
-  lch.y = 1.0 - smoothstep(0.0, 0.1, lch.y);
-  lab = lch_to_lab(lch);
-  var rgb = oklab_to_linear_srgb(lab);
+  var rgba_b = vec4(blur(myTexture, mySampler, in.color.xy), 1.0);
 
-  // return vec4(lch.yyy, 1.0);
-  return vec4(rgb, 0.5);
-  // return rgba;
+  var lab = linear_srgb_to_oklab(rgba.rgb);
+  var lab_b = linear_srgb_to_oklab(rgba_b.rgb);
+
+  var lch = lab_to_lch(lab);
+  var lch_b = lab_to_lch(lab_b);
+
+  lch.z += time;
+  lch_b.z += time;
+
+  lch.x = lch_b.x;
+  lch.y = lch_b.y;
+  // lch.z = lch_b.z;
+
+  lab = lch_to_lab(lch);
+  lab_b = lch_to_lab(lch_b);
+
+  rgba = vec4(oklab_to_linear_srgb(lab), 1.0);
+  rgba_b = vec4(oklab_to_linear_srgb(lab_b), 1.0);
+  
+  return rgba;
 }
