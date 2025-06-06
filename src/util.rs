@@ -19,6 +19,10 @@ pub unsafe fn as_u8_slice<T: Sized>(p: &T) -> &[u8] {
     core::slice::from_raw_parts((p as *const T) as *const u8, core::mem::size_of::<T>())
 }
 
+pub unsafe fn as_u8_slice_from_slice<T: Sized>(slice: &[T]) -> &[u8] {
+    core::slice::from_raw_parts(slice.as_ptr().cast::<u8>(), std::mem::size_of_val(slice))
+}
+
 #[derive(Debug)]
 pub enum GpuError {
     AdapterRequestFailed,

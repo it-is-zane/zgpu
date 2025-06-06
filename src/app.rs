@@ -124,6 +124,7 @@ impl App<'_> {
             event_loop
                 .create_window(
                     winit::window::WindowAttributes::default()
+                        .with_inner_size(winit::dpi::LogicalSize::new(1024, 1024))
                         .with_transparent(true)
                         .with_decorations(false),
                 )

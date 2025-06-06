@@ -1,5 +1,7 @@
 #![warn(clippy::all, clippy::pedantic)]
 
+use wgpu::util::DeviceExt;
+
 mod app;
 mod app_structure;
 mod imgui_platform_impl;
@@ -9,17 +11,15 @@ mod util;
 
 struct DevEvents {
     pipeline: wgpu::RenderPipeline,
-    material_bind_group: wgpu::BindGroup,
-    vertex_buffer: wgpu::Buffer,
-    time_uniform: wgpu::Buffer,
-    start: std::time::Instant,
+    char_bind_group: Option<wgpu::BindGroup>,
+    fonts: Vec<font::Font<std::fs::File>>,
 }
 #[allow(clippy::too_many_lines)]
 impl DevEvents {
     fn new(gpu: &app::Gpu, window: &app::WindowBundle) -> DevEvents {
         let module = &gpu
             .device
-            .create_shader_module(wgpu::include_wgsl!("shader.wgsl"));
+            .create_shader_module(wgpu::include_wgsl!("font_renderer.wgsl"));
 
         let pipeline = render_pipeline::Builder::new()
             .add_device(&gpu.device)
@@ -28,22 +28,7 @@ impl DevEvents {
                 module,
                 entry_point: Some("vs_main"),
                 compilation_options: wgpu::PipelineCompilationOptions::default(),
-                buffers: &[wgpu::VertexBufferLayout {
-                    array_stride: std::mem::size_of::<[glm::Vec3; 2]>() as u64,
-                    step_mode: wgpu::VertexStepMode::Vertex,
-                    attributes: &[
-                        wgpu::VertexAttribute {
-                            format: wgpu::VertexFormat::Float32x3,
-                            offset: 0,
-                            shader_location: 0,
-                        },
-                        wgpu::VertexAttribute {
-                            format: wgpu::VertexFormat::Float32x3,
-                            offset: std::mem::size_of::<glm::Vec3>() as u64,
-                            shader_location: 1,
-                        },
-                    ],
-                }],
+                buffers: &[],
             })
             .add_fragment(wgpu::FragmentState {
                 module,
@@ -51,123 +36,156 @@ impl DevEvents {
                 compilation_options: wgpu::PipelineCompilationOptions::default(),
                 targets: &[Some(wgpu::ColorTargetState {
                     format: window.config.format,
-                    blend: Some(wgpu::BlendState {
-                        color: wgpu::BlendComponent::REPLACE,
-                        alpha: wgpu::BlendComponent::REPLACE,
-                    }),
+                    blend: Some(wgpu::BlendState::ALPHA_BLENDING),
                     write_mask: wgpu::ColorWrites::ALL,
                 })],
             })
             .build();
 
-        let image = image::open("src/MillerGoogly.webp")
-            .unwrap()
-            .flipv()
-            .to_rgba8();
+        let font::File { fonts } =
+            font::File::open("/usr/share/fonts/aajohan-comfortaa-fonts/Comfortaa-Bold.otf")
+                .unwrap();
 
-        let size = image.dimensions();
-        let e3d = wgpu::Extent3d {
-            width: size.0,
-            height: size.1,
-            depth_or_array_layers: 1,
+        let mut dev_events = DevEvents {
+            pipeline,
+            char_bind_group: None,
+            fonts,
         };
 
-        let texture = gpu.device.create_texture(&wgpu::TextureDescriptor {
-            label: Some("src/miller_googly.webp"),
-            size: e3d,
-            mip_level_count: 1,
-            sample_count: 1,
-            dimension: wgpu::TextureDimension::D2,
-            format: wgpu::TextureFormat::Rgba8UnormSrgb,
-            usage: wgpu::TextureUsages::COPY_DST | wgpu::TextureUsages::TEXTURE_BINDING,
-            view_formats: &[wgpu::TextureFormat::Rgba8UnormSrgb],
-        });
+        dev_events.set_char(gpu, 'e');
 
-        gpu.queue.write_texture(
-            wgpu::TexelCopyTextureInfoBase {
-                texture: &texture,
-                mip_level: 0,
-                origin: wgpu::Origin3d::ZERO,
-                aspect: wgpu::TextureAspect::All,
-            },
-            &image,
-            wgpu::TexelCopyBufferLayout {
-                offset: 0,
-                bytes_per_row: Some(4 * size.0),
-                rows_per_image: Some(size.1),
-            },
-            e3d,
-        );
+        dev_events
+    }
 
-        let view = texture.create_view(&wgpu::TextureViewDescriptor::default());
+    fn set_char(&mut self, gpu: &app::Gpu, char: char) {
+        let glyph = self.fonts[0].glyph(char).unwrap().unwrap();
 
-        let sampler = gpu.device.create_sampler(&wgpu::SamplerDescriptor {
-            mag_filter: wgpu::FilterMode::Linear,
-            min_filter: wgpu::FilterMode::Linear,
-            ..Default::default()
-        });
+        let mut segments: Vec<f32> = Vec::new();
 
-        let time_uniform = gpu.device.create_buffer(&wgpu::BufferDescriptor {
-            label: Some("time uniform"),
-            size: std::mem::size_of::<f32>() as u64,
-            usage: wgpu::BufferUsages::UNIFORM | wgpu::BufferUsages::COPY_DST,
-            mapped_at_creation: false,
-        });
+        let push_offset = |offset: font::Offset, vec: &mut Vec<f32>| {
+            vec.push(offset.0);
+            vec.push(offset.1);
+        };
 
-        let material_bind_group = gpu.device.create_bind_group(&wgpu::BindGroupDescriptor {
-            label: Some("bind group"),
-            layout: &pipeline.get_bind_group_layout(0),
-            entries: &[
-                wgpu::BindGroupEntry {
-                    binding: 0,
-                    resource: wgpu::BindingResource::TextureView(&view),
-                },
-                wgpu::BindGroupEntry {
-                    binding: 1,
-                    resource: wgpu::BindingResource::Sampler(&sampler),
-                },
-                wgpu::BindGroupEntry {
-                    binding: 2,
-                    resource: wgpu::BindingResource::Buffer(wgpu::BufferBinding {
-                        buffer: &time_uniform,
-                        offset: 0,
-                        size: None,
-                    }),
-                },
-            ],
-        });
+        let mut pen = font::Offset(0.0, 0.0);
 
-        let vertices = [
-            [glm::Vec3::new(-1., 1., 0.), glm::Vec3::new(0., 1., 0.)],
-            [glm::Vec3::new(1., 1., 0.), glm::Vec3::new(1., 1., 0.)],
-            [glm::Vec3::new(1., -1., 0.), glm::Vec3::new(1., 0., 0.)],
-            //
-            [glm::Vec3::new(-1., 1., 0.), glm::Vec3::new(0., 1., 0.)],
-            [glm::Vec3::new(-1., -1., 0.), glm::Vec3::new(0., 0., 0.)],
-            [glm::Vec3::new(1., -1., 0.), glm::Vec3::new(1., 0., 0.)],
-        ];
+        for contour in glyph.iter() {
+            pen += contour.offset;
 
-        let bytes = unsafe { crate::util::as_u8_slice(&vertices) };
+            for segment in contour.iter() {
+                match segment {
+                    font::glyph::Segment::Linear(offset) => {
+                        let a = pen;
+                        let b = a + *offset;
 
-        let vertex_buffer = gpu.device.create_buffer(&wgpu::BufferDescriptor {
-            label: Some("vertices"),
-            size: bytes.len() as u64,
-            usage: wgpu::BufferUsages::VERTEX | wgpu::BufferUsages::COPY_DST,
-            mapped_at_creation: false,
-        });
+                        push_offset(a, &mut segments);
+                        push_offset(b, &mut segments);
 
-        gpu.queue.write_buffer(&vertex_buffer, 0, bytes);
+                        pen = b;
+                    }
+                    font::glyph::Segment::Quadratic(offset, offset1) => {
+                        let a = pen;
+                        let b = a + *offset;
+                        let c = b + *offset1;
 
-        DevEvents {
-            pipeline,
-            material_bind_group,
-            vertex_buffer,
-            time_uniform,
-            start: std::time::Instant::now(),
+                        let quad = |a: font::Offset, b: font::Offset, c: font::Offset, w: f32| {
+                            a + (b - a) * 2.0 * w + (a - b * 2.0 + c) * w * w
+                        };
+
+                        let quad_to_seg =
+                            |a: font::Offset,
+                             b: font::Offset,
+                             c: font::Offset,
+                             vec: &mut Vec<f32>| {
+                                let step = 100;
+
+                                for i in 0..step {
+                                    push_offset(quad(a, b, c, i as f32 / step as f32), vec);
+                                    push_offset(quad(a, b, c, (i + 1) as f32 / step as f32), vec);
+                                }
+                            };
+
+                        quad_to_seg(a, b, c, &mut segments);
+
+                        pen = c;
+                    }
+                    font::glyph::Segment::Cubic(offset, offset1, offset2) => {
+                        let a = pen;
+                        let b = a + *offset;
+                        let c = b + *offset1;
+                        let d = c + *offset2;
+
+                        let cubic = |a: font::Offset,
+                                     b: font::Offset,
+                                     c: font::Offset,
+                                     d: font::Offset,
+                                     w: f32| {
+                            a + (b - a) * 3 * w
+                                + (a + c - b * 2) * 3 * w * w
+                                + (b * 3 + d - a - c * 3) * w * w * w
+                        };
+
+                        let cubic_to_seg =
+                            |a: font::Offset,
+                             b: font::Offset,
+                             c: font::Offset,
+                             d: font::Offset,
+                             vec: &mut Vec<f32>| {
+                                let step = 100;
+
+                                for i in 0..step {
+                                    push_offset(cubic(a, b, c, d, i as f32 / step as f32), vec);
+                                    push_offset(
+                                        cubic(a, b, c, d, (i + 1) as f32 / step as f32),
+                                        vec,
+                                    );
+                                }
+                            };
+
+                        cubic_to_seg(a, b, c, d, &mut segments);
+                        // todo!();
+
+                        pen = d;
+                    }
+                }
+            }
         }
+
+        let segment_buffer = if segments.is_empty() {
+            gpu.device.create_buffer(&wgpu::BufferDescriptor {
+                label: Some("segments buffer"),
+                size: 32,
+                usage: wgpu::BufferUsages::STORAGE,
+                mapped_at_creation: false,
+            })
+        } else {
+            gpu.device
+                .create_buffer_init(&wgpu::util::BufferInitDescriptor {
+                    label: Some("segments buffer"),
+                    contents: unsafe { crate::util::as_u8_slice_from_slice(&segments) },
+                    usage: wgpu::BufferUsages::STORAGE,
+                })
+        };
+
+        self.char_bind_group = Some(gpu.device.create_bind_group(&wgpu::BindGroupDescriptor {
+            label: Some(&format!("{char}")),
+            layout: &self.pipeline.get_bind_group_layout(0),
+            entries: &[wgpu::BindGroupEntry {
+                binding: 0,
+                resource: wgpu::BindingResource::Buffer(wgpu::BufferBinding {
+                    buffer: &segment_buffer,
+                    offset: 0,
+                    size: None,
+                }),
+            }],
+        }));
+
+        gpu.queue.submit(std::iter::empty());
+        gpu.device.poll(wgpu::Maintain::Wait);
     }
 }
 
+#[allow(clippy::too_many_lines)]
 impl app::EventHandler for DevEvents {
     fn window_event(
         &mut self,
@@ -181,7 +199,7 @@ impl app::EventHandler for DevEvents {
                 event:
                     winit::event::KeyEvent {
                         physical_key:
-                            winit::keyboard::PhysicalKey::Code(winit::keyboard::KeyCode::KeyQ),
+                            winit::keyboard::PhysicalKey::Code(winit::keyboard::KeyCode::Escape),
                         state: winit::event::ElementState::Pressed,
                         ..
                     },
@@ -195,7 +213,7 @@ impl app::EventHandler for DevEvents {
                 event:
                     winit::event::KeyEvent {
                         physical_key:
-                            winit::keyboard::PhysicalKey::Code(winit::keyboard::KeyCode::KeyF),
+                            winit::keyboard::PhysicalKey::Code(winit::keyboard::KeyCode::F11),
                         state: winit::event::ElementState::Pressed,
                         ..
                     },
@@ -209,6 +227,20 @@ impl app::EventHandler for DevEvents {
                     Some(winit::window::Fullscreen::Borderless(None))
                 },
             ),
+            winit::event::WindowEvent::KeyboardInput {
+                event:
+                    winit::event::KeyEvent {
+                        logical_key: winit::keyboard::Key::Character(chars),
+                        state: winit::event::ElementState::Pressed,
+                        ..
+                    },
+                ..
+            } => {
+                if let Some(char) = chars.chars().next() {
+                    self.set_char(gpu, char);
+                    window_bundle.window.request_redraw();
+                }
+            }
             winit::event::WindowEvent::MouseInput {
                 device_id: _,
                 state: winit::event::ElementState::Pressed,
@@ -228,11 +260,6 @@ impl app::EventHandler for DevEvents {
                     .configure(&gpu.device, &window_bundle.config);
             }
             winit::event::WindowEvent::RedrawRequested => {
-                let since = self.start.elapsed().as_secs_f32();
-                gpu.queue.write_buffer(&self.time_uniform, 0, unsafe {
-                    crate::util::as_u8_slice(&since)
-                });
-
                 let mut ce = gpu
                     .device
                     .create_command_encoder(&wgpu::CommandEncoderDescriptor::default());
@@ -242,12 +269,6 @@ impl app::EventHandler for DevEvents {
                     .get_current_texture()
                     .expect("failed to get surface texture");
 
-                let view = surface_texture
-                    .texture
-                    .create_view(&wgpu::TextureViewDescriptor {
-                        ..Default::default()
-                    });
-
                 {
                     let mut pass = ce.begin_render_pass(&wgpu::RenderPassDescriptor {
                         color_attachments: &[Some(wgpu::RenderPassColorAttachment {
@@ -256,7 +277,7 @@ impl app::EventHandler for DevEvents {
                                 .create_view(&wgpu::TextureViewDescriptor::default()),
                             resolve_target: None,
                             ops: wgpu::Operations {
-                                load: wgpu::LoadOp::Clear(wgpu::Color::BLUE),
+                                load: wgpu::LoadOp::Clear(wgpu::Color::BLACK),
                                 store: wgpu::StoreOp::Store,
                             },
                         })],
@@ -264,17 +285,13 @@ impl app::EventHandler for DevEvents {
                     });
 
                     pass.set_pipeline(&self.pipeline);
-                    pass.set_bind_group(0, Some(&self.material_bind_group), &[]);
-                    pass.set_vertex_buffer(0, self.vertex_buffer.slice(..));
-                    pass.draw(0..6, 0..1);
+                    pass.set_bind_group(0, &self.char_bind_group, &[]);
+                    pass.draw(0..3, 0..1);
                 }
 
                 gpu.queue.submit([ce.finish()]);
                 window_bundle.window.pre_present_notify();
                 surface_texture.present();
-
-                // std::thread::sleep(std::time::Duration::from_secs_f64(1.0 / 30.0));
-                window_bundle.window.request_redraw();
             }
             // event => println!("{:#?}", event),
             _ => {}

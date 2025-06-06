@@ -1,6 +1,9 @@
-@group(0) @binding(0) var<storage> segments: array<array<vec2<f32>, 2>>;
-@group(0) @binding(2) var<storage> quadratics: array<array<vec2<f32>, 3>>;
-@group(0) @binding(1) var<storage> cubics: array<array<vec2<f32>, 4>>;
+struct Segment {
+  a: vec2<f32>,
+  b: vec2<f32>,
+}
+
+@group(0) @binding(0) var<storage, read> segments: array<Segment>;
 
 struct VertexOutput {
     @builtin(position) clip_position: vec4<f32>,
@@ -10,33 +13,52 @@ struct VertexOutput {
 fn sdf_segment(
   p: vec2<f32>,
   a: vec2<f32>,
-  b: vec2<f32>
+  b: vec2<f32>,
 ) -> f32 {
   let pa = p - a;
   let ba = b - a;
   let h = clamp(dot(pa, ba) / dot(ba, ba), 0.0, 1.0);
 
+
   return length(pa - ba * h);
 }
 
+fn sdf(p: vec2<f32>) -> f32 {
+  var d = 1e6;
+  var n = vec2(0.0);
+  var s = 0.0;
 
-fn sdf_quadratic_bezier(
-  pos: vec2<f32>,
-  A: vec2<f32>,
-  B: vec2<f32>,
-  C: vec2<f32>,
-  D: vec2<f32>
-) -> f32 {
-  return 1000000.0;
-}
+  for (var i = 0u; i < arrayLength(&segments); i++) {
+      let a = segments[i].a;
+      let b = segments[i].b;
+  
+      let new_d = sdf_segment(p, a, b);
+      let new_n = (b - a).yx * vec2(1.0, -1.0);
 
-fn sdf_cubic_bezier(
-  p: vec2<f32>,
-  a: vec2<f32>,
-  b: vec2<f32>,
-  c: vec2<f32>
-) -> f32 {
-  return 1000000.0;
+      if (abs(new_d) < abs(d)) {
+        d = new_d;
+        n = new_n;
+
+        s = sign(dot(n, p - a));
+      }
+
+      if (abs(abs(new_d) - abs(d)) <= 0.001) {
+        let s_old = sign(dot(n, p - a));
+        let s_new = sign(dot(new_n, p - a));
+
+        if (s_old != s_new) {
+          d = new_d;
+          n = normalize(n) + normalize(new_n);
+
+          s = sign(dot(n, p - a));
+        }
+
+      }
+
+      n += normalize(new_n) / new_d;
+  }
+
+  return d * s;
 }
 
 @vertex
@@ -55,41 +77,9 @@ fn vs_main(
 
 @fragment
 fn fs_main(in: VertexOutput) -> @location(0) vec4<f32> {
-  var d = 1000000.0;
+  let uv = in.color.xy;
 
-  for (var i = 0; i < arrayLength(segments); i++) {
-    d = min(
-      sdf_segment(
-        uv,
-        segments[i][0],
-        segments[i][1]
-      ),
-      d
-    );
-  }
-  for (var i = 0; i < arrayLength(quadriatics); i++) {
-    d = min(
-      sdf_quadratic_bezier(
-        uv,
-        segments[i][0],
-        segments[i][1],
-        segments[i][2]
-      ),
-      d
-    );
-  }
-  for (var i = 0; i < arrayLength(cubics); i++) {
-    d = min(
-      sdf_cubic_bezier(
-        uv,
-        segments[i][0],
-        segments[i][1],
-        segments[i][2],
-        segments[i][3]
-      ),
-      d
-    );
-  }
-
-  return vec4(vec3(d), 1.0);
+  let d = sdf(uv * 1000.0);
+  
+  return vec4(f32(d < 0.0));
 }
