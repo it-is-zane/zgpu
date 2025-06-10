@@ -13,6 +13,9 @@ struct DevEvents {
     pipeline: wgpu::RenderPipeline,
     char_bind_group: Option<wgpu::BindGroup>,
     fonts: Vec<font::Font<std::fs::File>>,
+    char: char,
+    render_percent: f32,
+    start_time: std::time::Instant,
 }
 #[allow(clippy::too_many_lines)]
 impl DevEvents {
@@ -44,23 +47,28 @@ impl DevEvents {
 
         let font::File { fonts } =
             font::File::open("/usr/share/fonts/aajohan-comfortaa-fonts/Comfortaa-Bold.otf")
+                // font::File::open("src/minecraft_font.ttf")
                 .unwrap();
 
         let mut dev_events = DevEvents {
             pipeline,
             char_bind_group: None,
             fonts,
+            char: 'e',
+            render_percent: 1.0,
+            start_time: std::time::Instant::now(),
         };
 
-        dev_events.set_char(gpu, 'e');
+        dev_events.set_char(gpu, 'e', &1.0);
 
         dev_events
     }
 
-    fn set_char(&mut self, gpu: &app::Gpu, char: char) {
+    fn set_char(&mut self, gpu: &app::Gpu, char: char, percent: &f32) {
         let glyph = self.fonts[0].glyph(char).unwrap().unwrap();
 
         let mut segments: Vec<f32> = Vec::new();
+        let mut contour_markers: Vec<u32> = Vec::new();
 
         let push_offset = |offset: font::Offset, vec: &mut Vec<f32>| {
             vec.push(offset.0);
@@ -71,6 +79,7 @@ impl DevEvents {
 
         for contour in glyph.iter() {
             pen += contour.offset;
+            contour_markers.push(contour.segments.len() as u32);
 
             for segment in contour.iter() {
                 match segment {
@@ -143,7 +152,6 @@ impl DevEvents {
                             };
 
                         cubic_to_seg(a, b, c, d, &mut segments);
-                        // todo!();
 
                         pen = d;
                     }
@@ -167,17 +175,59 @@ impl DevEvents {
                 })
         };
 
+        let contour_markers_buffer = if contour_markers.is_empty() {
+            gpu.device.create_buffer(&wgpu::BufferDescriptor {
+                label: Some("contour_markers buffer"),
+                size: 32,
+                usage: wgpu::BufferUsages::STORAGE,
+                mapped_at_creation: false,
+            })
+        } else {
+            gpu.device
+                .create_buffer_init(&wgpu::util::BufferInitDescriptor {
+                    label: Some("contour_markers buffer"),
+                    contents: unsafe { crate::util::as_u8_slice_from_slice(&contour_markers) },
+                    usage: wgpu::BufferUsages::STORAGE,
+                })
+        };
+
+        let render_percent = gpu
+            .device
+            .create_buffer_init(&wgpu::util::BufferInitDescriptor {
+                label: Some("render percent uniform"),
+                contents: unsafe { crate::util::as_u8_slice(percent) },
+                usage: wgpu::BufferUsages::UNIFORM,
+            });
+
         self.char_bind_group = Some(gpu.device.create_bind_group(&wgpu::BindGroupDescriptor {
             label: Some(&format!("{char}")),
             layout: &self.pipeline.get_bind_group_layout(0),
-            entries: &[wgpu::BindGroupEntry {
-                binding: 0,
-                resource: wgpu::BindingResource::Buffer(wgpu::BufferBinding {
-                    buffer: &segment_buffer,
-                    offset: 0,
-                    size: None,
-                }),
-            }],
+            entries: &[
+                wgpu::BindGroupEntry {
+                    binding: 0,
+                    resource: wgpu::BindingResource::Buffer(wgpu::BufferBinding {
+                        buffer: &segment_buffer,
+                        offset: 0,
+                        size: None,
+                    }),
+                },
+                wgpu::BindGroupEntry {
+                    binding: 1,
+                    resource: wgpu::BindingResource::Buffer(wgpu::BufferBinding {
+                        buffer: &contour_markers_buffer,
+                        offset: 0,
+                        size: None,
+                    }),
+                },
+                wgpu::BindGroupEntry {
+                    binding: 2,
+                    resource: wgpu::BindingResource::Buffer(wgpu::BufferBinding {
+                        buffer: &render_percent,
+                        offset: 0,
+                        size: None,
+                    }),
+                },
+            ],
         }));
 
         gpu.queue.submit(std::iter::empty());
@@ -237,7 +287,9 @@ impl app::EventHandler for DevEvents {
                 ..
             } => {
                 if let Some(char) = chars.chars().next() {
-                    self.set_char(gpu, char);
+                    let percent = self.render_percent;
+                    self.char = char;
+                    self.set_char(gpu, char, &percent);
                     window_bundle.window.request_redraw();
                 }
             }
@@ -251,6 +303,21 @@ impl app::EventHandler for DevEvents {
                     .drag_window()
                     .expect("failed to drag window");
             }
+            winit::event::WindowEvent::MouseWheel {
+                device_id: _,
+                delta,
+                phase: _,
+            } => {
+                match delta {
+                    winit::event::MouseScrollDelta::LineDelta(_, y) => {
+                        self.render_percent += y / 1000.0;
+                    }
+                    winit::event::MouseScrollDelta::PixelDelta(physical_position) => todo!(),
+                }
+                let percent = self.render_percent;
+                self.set_char(gpu, self.char, &percent);
+                window_bundle.window.request_redraw();
+            }
             winit::event::WindowEvent::Resized(winit::dpi::PhysicalSize { width, height }) => {
                 window_bundle.config.width = width;
                 window_bundle.config.height = height;
@@ -260,6 +327,10 @@ impl app::EventHandler for DevEvents {
                     .configure(&gpu.device, &window_bundle.config);
             }
             winit::event::WindowEvent::RedrawRequested => {
+                let t = ((1.0 - (self.start_time.elapsed().as_secs_f32() * 0.1) % 1.0) * 2.0 - 1.0)
+                    .abs();
+                self.set_char(gpu, self.char, &t);
+
                 let mut ce = gpu
                     .device
                     .create_command_encoder(&wgpu::CommandEncoderDescriptor::default());
@@ -292,6 +363,8 @@ impl app::EventHandler for DevEvents {
                 gpu.queue.submit([ce.finish()]);
                 window_bundle.window.pre_present_notify();
                 surface_texture.present();
+                std::thread::sleep(std::time::Duration::from_secs_f32(1.0 / 30.0));
+                window_bundle.window.request_redraw();
             }
             // event => println!("{:#?}", event),
             _ => {}

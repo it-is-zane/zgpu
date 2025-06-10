@@ -1,0 +1,1631 @@
+{
+    "software": {
+        "name": "rTexPacker v5.0",
+        "url": "https://www.raylibtech.com/rtexpacker"
+    },
+    "atlas": {
+        "imagePath": "atlas.png",
+        "width": 1024,
+        "height": 1024,
+        "spriteCount": 95,
+        "isFont": true,
+        "fontSize": 180
+    },
+    "sprites": [
+        {
+            "nameId": "Comfortaa-Regular-U0020",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 1, "y": 1 },
+            "sourceSize": { "width": 47, "height": 180 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 47, "height": 180 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 32,
+                "offset": { "x": 0, "y": 0 },
+                "advanceX": 47
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0021",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 181, "y": 698 },
+            "sourceSize": { "width": 19, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 19, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 33,
+                "offset": { "x": 8, "y": 15 },
+                "advanceX": 42
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0022",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 209, "y": 918 },
+            "sourceSize": { "width": 33, "height": 36 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 33, "height": 36 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 34,
+                "offset": { "x": 6, "y": 15 },
+                "advanceX": 44
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0023",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 446, "y": 313 },
+            "sourceSize": { "width": 102, "height": 128 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 102, "height": 128 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 35,
+                "offset": { "x": 8, "y": 14 },
+                "advanceX": 116
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0024",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 528, "y": 1 },
+            "sourceSize": { "width": 84, "height": 154 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 84, "height": 154 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 36,
+                "offset": { "x": 6, "y": 4 },
+                "advanceX": 96
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0025",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 511, "y": 442 },
+            "sourceSize": { "width": 130, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 130, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 37,
+                "offset": { "x": 5, "y": 15 },
+                "advanceX": 138
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0026",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 745, "y": 1 },
+            "sourceSize": { "width": 104, "height": 130 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 104, "height": 130 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 38,
+                "offset": { "x": 7, "y": 14 },
+                "advanceX": 116
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0027",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 243, "y": 918 },
+            "sourceSize": { "width": 14, "height": 36 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 14, "height": 36 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 39,
+                "offset": { "x": 6, "y": 15 },
+                "advanceX": 25
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0028",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 49, "y": 1 },
+            "sourceSize": { "width": 32, "height": 165 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 32, "height": 165 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 40,
+                "offset": { "x": 8, "y": 15 },
+                "advanceX": 41
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0029",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 82, "y": 1 },
+            "sourceSize": { "width": 32, "height": 165 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 32, "height": 165 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 41,
+                "offset": { "x": 1, "y": 15 },
+                "advanceX": 41
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U002A",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 137, "y": 918 },
+            "sourceSize": { "width": 49, "height": 48 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 49, "height": 48 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 42,
+                "offset": { "x": 7, "y": 15 },
+                "advanceX": 61
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U002B",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 913, "y": 826 },
+            "sourceSize": { "width": 76, "height": 77 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 76, "height": 77 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 43,
+                "offset": { "x": 6, "y": 47 },
+                "advanceX": 88
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U002C",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 187, "y": 918 },
+            "sourceSize": { "width": 21, "height": 44 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 21, "height": 44 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 44,
+                "offset": { "x": 8, "y": 125 },
+                "advanceX": 36
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U002D",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 379, "y": 918 },
+            "sourceSize": { "width": 51, "height": 14 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 51, "height": 14 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 45,
+                "offset": { "x": 6, "y": 91 },
+                "advanceX": 63
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U002E",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 359, "y": 918 },
+            "sourceSize": { "width": 19, "height": 20 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 19, "height": 20 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 46,
+                "offset": { "x": 8, "y": 125 },
+                "advanceX": 34
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U002F",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 678, "y": 1 },
+            "sourceSize": { "width": 66, "height": 140 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 66, "height": 140 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 47,
+                "offset": { "x": 5, "y": 15 },
+                "advanceX": 75
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0030",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 292, "y": 570 },
+            "sourceSize": { "width": 77, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 77, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 48,
+                "offset": { "x": 8, "y": 15 },
+                "advanceX": 92
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0031",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 370, "y": 570 },
+            "sourceSize": { "width": 39, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 39, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 49,
+                "offset": { "x": 6, "y": 15 },
+                "advanceX": 61
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0032",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 754, "y": 570 },
+            "sourceSize": { "width": 77, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 77, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 50,
+                "offset": { "x": 10, "y": 15 },
+                "advanceX": 93
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0033",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 872, "y": 182 },
+            "sourceSize": { "width": 80, "height": 128 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 80, "height": 128 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 51,
+                "offset": { "x": 8, "y": 15 },
+                "advanceX": 94
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0034",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 321, "y": 698 },
+            "sourceSize": { "width": 98, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 98, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 52,
+                "offset": { "x": 0, "y": 15 },
+                "advanceX": 104
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0035",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 1, "y": 442 },
+            "sourceSize": { "width": 83, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 83, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 53,
+                "offset": { "x": 10, "y": 15 },
+                "advanceX": 101
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0036",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 166, "y": 442 },
+            "sourceSize": { "width": 77, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 77, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 54,
+                "offset": { "x": 10, "y": 15 },
+                "advanceX": 93
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0037",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 328, "y": 442 },
+            "sourceSize": { "width": 79, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 79, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 55,
+                "offset": { "x": 7, "y": 15 },
+                "advanceX": 91
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0038",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 185, "y": 313 },
+            "sourceSize": { "width": 76, "height": 128 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 76, "height": 128 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 56,
+                "offset": { "x": 10, "y": 15 },
+                "advanceX": 95
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0039",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 215, "y": 570 },
+            "sourceSize": { "width": 76, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 76, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 57,
+                "offset": { "x": 7, "y": 15 },
+                "advanceX": 93
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U003A",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 178, "y": 826 },
+            "sourceSize": { "width": 20, "height": 91 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 20, "height": 91 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 58,
+                "offset": { "x": 5, "y": 54 },
+                "advanceX": 31
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U003B",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 590, "y": 698 },
+            "sourceSize": { "width": 24, "height": 115 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 24, "height": 115 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 59,
+                "offset": { "x": 5, "y": 54 },
+                "advanceX": 32
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U003C",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 692, "y": 698 },
+            "sourceSize": { "width": 76, "height": 93 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 76, "height": 93 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 60,
+                "offset": { "x": 6, "y": 39 },
+                "advanceX": 88
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U003D",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 66, "y": 918 },
+            "sourceSize": { "width": 70, "height": 52 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 70, "height": 52 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 61,
+                "offset": { "x": 6, "y": 59 },
+                "advanceX": 82
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U003E",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 615, "y": 698 },
+            "sourceSize": { "width": 76, "height": 93 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 76, "height": 93 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 62,
+                "offset": { "x": 6, "y": 39 },
+                "advanceX": 88
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U003F",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 647, "y": 182 },
+            "sourceSize": { "width": 76, "height": 129 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 76, "height": 129 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 63,
+                "offset": { "x": 6, "y": 13 },
+                "advanceX": 88
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0040",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 115, "y": 1 },
+            "sourceSize": { "width": 165, "height": 165 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 165, "height": 165 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 64,
+                "offset": { "x": 6, "y": 15 },
+                "advanceX": 176
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0041",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 410, "y": 570 },
+            "sourceSize": { "width": 112, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 112, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 65,
+                "offset": { "x": 1, "y": 15 },
+                "advanceX": 113
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0042",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 523, "y": 570 },
+            "sourceSize": { "width": 88, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 88, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 66,
+                "offset": { "x": 16, "y": 15 },
+                "advanceX": 112
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0043",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 850, "y": 1 },
+            "sourceSize": { "width": 106, "height": 130 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 106, "height": 130 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 67,
+                "offset": { "x": 10, "y": 14 },
+                "advanceX": 123
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0044",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 832, "y": 570 },
+            "sourceSize": { "width": 99, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 99, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 68,
+                "offset": { "x": 16, "y": 15 },
+                "advanceX": 124
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0045",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 1, "y": 698 },
+            "sourceSize": { "width": 89, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 89, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 69,
+                "offset": { "x": 16, "y": 15 },
+                "advanceX": 111
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0046",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 91, "y": 698 },
+            "sourceSize": { "width": 89, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 89, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 70,
+                "offset": { "x": 6, "y": 15 },
+                "advanceX": 100
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0047",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 1, "y": 182 },
+            "sourceSize": { "width": 106, "height": 130 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 106, "height": 130 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 71,
+                "offset": { "x": 10, "y": 14 },
+                "advanceX": 123
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0048",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 201, "y": 698 },
+            "sourceSize": { "width": 105, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 105, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 72,
+                "offset": { "x": 16, "y": 15 },
+                "advanceX": 136
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0049",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 307, "y": 698 },
+            "sourceSize": { "width": 13, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 13, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 73,
+                "offset": { "x": 16, "y": 15 },
+                "advanceX": 44
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U004A",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 724, "y": 182 },
+            "sourceSize": { "width": 76, "height": 129 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 76, "height": 129 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 74,
+                "offset": { "x": 7, "y": 15 },
+                "advanceX": 99
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U004B",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 549, "y": 313 },
+            "sourceSize": { "width": 85, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 85, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 75,
+                "offset": { "x": 16, "y": 15 },
+                "advanceX": 105
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U004C",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 635, "y": 313 },
+            "sourceSize": { "width": 83, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 83, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 76,
+                "offset": { "x": 16, "y": 15 },
+                "advanceX": 102
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U004D",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 719, "y": 313 },
+            "sourceSize": { "width": 127, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 127, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 77,
+                "offset": { "x": 16, "y": 15 },
+                "advanceX": 158
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U004E",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 847, "y": 313 },
+            "sourceSize": { "width": 102, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 102, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 78,
+                "offset": { "x": 16, "y": 15 },
+                "advanceX": 133
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U004F",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 108, "y": 182 },
+            "sourceSize": { "width": 129, "height": 130 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 129, "height": 130 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 79,
+                "offset": { "x": 10, "y": 14 },
+                "advanceX": 148
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0050",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 85, "y": 442 },
+            "sourceSize": { "width": 80, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 80, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 80,
+                "offset": { "x": 16, "y": 15 },
+                "advanceX": 98
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0051",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 238, "y": 182 },
+            "sourceSize": { "width": 129, "height": 130 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 129, "height": 130 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 81,
+                "offset": { "x": 10, "y": 14 },
+                "advanceX": 148
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0052",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 244, "y": 442 },
+            "sourceSize": { "width": 83, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 83, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 82,
+                "offset": { "x": 16, "y": 15 },
+                "advanceX": 99
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0053",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 368, "y": 182 },
+            "sourceSize": { "width": 88, "height": 130 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 88, "height": 130 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 83,
+                "offset": { "x": 9, "y": 14 },
+                "advanceX": 106
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0054",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 408, "y": 442 },
+            "sourceSize": { "width": 102, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 102, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 84,
+                "offset": { "x": 2, "y": 15 },
+                "advanceX": 105
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0055",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 457, "y": 182 },
+            "sourceSize": { "width": 101, "height": 130 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 101, "height": 130 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 85,
+                "offset": { "x": 16, "y": 15 },
+                "advanceX": 132
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0056",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 642, "y": 442 },
+            "sourceSize": { "width": 113, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 113, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 86,
+                "offset": { "x": 1, "y": 15 },
+                "advanceX": 115
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0057",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 756, "y": 442 },
+            "sourceSize": { "width": 147, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 147, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 87,
+                "offset": { "x": 2, "y": 15 },
+                "advanceX": 151
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0058",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 904, "y": 442 },
+            "sourceSize": { "width": 104, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 104, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 88,
+                "offset": { "x": 5, "y": 15 },
+                "advanceX": 114
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0059",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 1, "y": 570 },
+            "sourceSize": { "width": 107, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 107, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 89,
+                "offset": { "x": -1, "y": 15 },
+                "advanceX": 104
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U005A",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 109, "y": 570 },
+            "sourceSize": { "width": 105, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 105, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 90,
+                "offset": { "x": 6, "y": 15 },
+                "advanceX": 116
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U005B",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 281, "y": 1 },
+            "sourceSize": { "width": 39, "height": 165 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 39, "height": 165 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 91,
+                "offset": { "x": 10, "y": 15 },
+                "advanceX": 48
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U005C",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 613, "y": 1 },
+            "sourceSize": { "width": 64, "height": 140 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 64, "height": 140 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 92,
+                "offset": { "x": 6, "y": 15 },
+                "advanceX": 75
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U005D",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 321, "y": 1 },
+            "sourceSize": { "width": 39, "height": 165 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 39, "height": 165 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 93,
+                "offset": { "x": 0, "y": 15 },
+                "advanceX": 48
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U005E",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 1, "y": 918 },
+            "sourceSize": { "width": 64, "height": 52 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 64, "height": 52 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 94,
+                "offset": { "x": 6, "y": 15 },
+                "advanceX": 75
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U005F",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 431, "y": 918 },
+            "sourceSize": { "width": 91, "height": 13 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 91, "height": 13 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 95,
+                "offset": { "x": -7, "y": 142 },
+                "advanceX": 75
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0060",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 258, "y": 918 },
+            "sourceSize": { "width": 32, "height": 32 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 32, "height": 32 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 96,
+                "offset": { "x": 6, "y": 15 },
+                "advanceX": 44
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0061",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 923, "y": 698 },
+            "sourceSize": { "width": 91, "height": 91 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 91, "height": 91 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 97,
+                "offset": { "x": 9, "y": 52 },
+                "advanceX": 109
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0062",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 262, "y": 313 },
+            "sourceSize": { "width": 91, "height": 128 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 91, "height": 128 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 98,
+                "offset": { "x": 14, "y": 15 },
+                "advanceX": 114
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0063",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 843, "y": 698 },
+            "sourceSize": { "width": 79, "height": 91 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 79, "height": 91 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 99,
+                "offset": { "x": 9, "y": 52 },
+                "advanceX": 96
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0064",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 354, "y": 313 },
+            "sourceSize": { "width": 91, "height": 128 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 91, "height": 128 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 100,
+                "offset": { "x": 9, "y": 15 },
+                "advanceX": 114
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0065",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 93, "y": 826 },
+            "sourceSize": { "width": 84, "height": 91 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 84, "height": 91 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 101,
+                "offset": { "x": 9, "y": 52 },
+                "advanceX": 99
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0066",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 612, "y": 570 },
+            "sourceSize": { "width": 57, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 57, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 102,
+                "offset": { "x": 3, "y": 15 },
+                "advanceX": 59
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0067",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 420, "y": 698 },
+            "sourceSize": { "width": 91, "height": 125 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 91, "height": 125 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 103,
+                "offset": { "x": 9, "y": 52 },
+                "advanceX": 109
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0068",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 670, "y": 570 },
+            "sourceSize": { "width": 83, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 83, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 104,
+                "offset": { "x": 14, "y": 15 },
+                "advanceX": 109
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0069",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 512, "y": 698 },
+            "sourceSize": { "width": 19, "height": 123 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 19, "height": 123 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 105,
+                "offset": { "x": 14, "y": 19 },
+                "advanceX": 46
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U006A",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 479, "y": 1 },
+            "sourceSize": { "width": 48, "height": 161 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 48, "height": 161 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 106,
+                "offset": { "x": -16, "y": 19 },
+                "advanceX": 46
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U006B",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 801, "y": 182 },
+            "sourceSize": { "width": 70, "height": 129 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 70, "height": 129 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 107,
+                "offset": { "x": 14, "y": 15 },
+                "advanceX": 92
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U006C",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 932, "y": 570 },
+            "sourceSize": { "width": 32, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 32, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 108,
+                "offset": { "x": 11, "y": 15 },
+                "advanceX": 45
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U006D",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 429, "y": 826 },
+            "sourceSize": { "width": 126, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 126, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 109,
+                "offset": { "x": 14, "y": 52 },
+                "advanceX": 152
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U006E",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 345, "y": 826 },
+            "sourceSize": { "width": 83, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 83, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 110,
+                "offset": { "x": 14, "y": 52 },
+                "advanceX": 109
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U006F",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 1, "y": 826 },
+            "sourceSize": { "width": 91, "height": 91 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 91, "height": 91 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 111,
+                "offset": { "x": 9, "y": 52 },
+                "advanceX": 109
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0070",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 1, "y": 313 },
+            "sourceSize": { "width": 91, "height": 128 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 91, "height": 128 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 112,
+                "offset": { "x": 14, "y": 52 },
+                "advanceX": 114
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0071",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 93, "y": 313 },
+            "sourceSize": { "width": 91, "height": 128 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 91, "height": 128 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 113,
+                "offset": { "x": 9, "y": 52 },
+                "advanceX": 114
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0072",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 287, "y": 826 },
+            "sourceSize": { "width": 57, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 57, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 114,
+                "offset": { "x": 14, "y": 52 },
+                "advanceX": 73
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0073",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 769, "y": 698 },
+            "sourceSize": { "width": 73, "height": 91 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 73, "height": 91 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 115,
+                "offset": { "x": 8, "y": 52 },
+                "advanceX": 87
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0074",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 532, "y": 698 },
+            "sourceSize": { "width": 57, "height": 117 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 57, "height": 117 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 116,
+                "offset": { "x": 3, "y": 25 },
+                "advanceX": 64
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0075",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 556, "y": 826 },
+            "sourceSize": { "width": 83, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 83, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 117,
+                "offset": { "x": 12, "y": 53 },
+                "advanceX": 109
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0076",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 199, "y": 826 },
+            "sourceSize": { "width": 87, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 87, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 118,
+                "offset": { "x": 1, "y": 52 },
+                "advanceX": 89
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0077",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 722, "y": 826 },
+            "sourceSize": { "width": 116, "height": 89 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 116, "height": 89 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 119,
+                "offset": { "x": 2, "y": 53 },
+                "advanceX": 119
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0078",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 640, "y": 826 },
+            "sourceSize": { "width": 81, "height": 89 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 81, "height": 89 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 120,
+                "offset": { "x": 4, "y": 53 },
+                "advanceX": 88
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U0079",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 559, "y": 182 },
+            "sourceSize": { "width": 87, "height": 129 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 87, "height": 129 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 121,
+                "offset": { "x": 2, "y": 52 },
+                "advanceX": 88
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U007A",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 839, "y": 826 },
+            "sourceSize": { "width": 73, "height": 89 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 73, "height": 89 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 122,
+                "offset": { "x": 9, "y": 53 },
+                "advanceX": 88
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U007B",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 361, "y": 1 },
+            "sourceSize": { "width": 51, "height": 165 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 51, "height": 165 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 123,
+                "offset": { "x": 8, "y": 15 },
+                "advanceX": 61
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U007C",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 413, "y": 1 },
+            "sourceSize": { "width": 13, "height": 165 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 13, "height": 165 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 124,
+                "offset": { "x": 25, "y": 15 },
+                "advanceX": 63
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U007D",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 427, "y": 1 },
+            "sourceSize": { "width": 51, "height": 165 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 51, "height": 165 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 125,
+                "offset": { "x": 2, "y": 15 },
+                "advanceX": 61
+            }
+        },
+        {
+            "nameId": "Comfortaa-Regular-U007E",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 291, "y": 918 },
+            "sourceSize": { "width": 67, "height": 21 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 67, "height": 21 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 126,
+                "offset": { "x": 5, "y": 72 },
+                "advanceX": 75
+            }
+        }
+    ]
+}

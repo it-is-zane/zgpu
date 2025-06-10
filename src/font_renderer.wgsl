@@ -4,6 +4,8 @@ struct Segment {
 }
 
 @group(0) @binding(0) var<storage, read> segments: array<Segment>;
+@group(0) @binding(1) var<storage, read> contour_markers: array<u32>;
+@group(0) @binding(2) var<uniform> render_percent: f32;
 
 struct VertexOutput {
     @builtin(position) clip_position: vec4<f32>,
@@ -19,7 +21,6 @@ fn sdf_segment(
   let ba = b - a;
   let h = clamp(dot(pa, ba) / dot(ba, ba), 0.0, 1.0);
 
-
   return length(pa - ba * h);
 }
 
@@ -28,35 +29,50 @@ fn sdf(p: vec2<f32>) -> f32 {
   var n = vec2(0.0);
   var s = 0.0;
 
-  for (var i = 0u; i < arrayLength(&segments); i++) {
+  var i = 0u;
+
+  for (var j = 0u; j < arrayLength(&contour_markers); j++) {
+    var d_c = 1e6;
+    var n_c = vec2(0.0);
+    var s_c = 0.0;
+
+    for (; i < arrayLength(&segments) && f32(i) < f32(arrayLength(&segments)) * render_percent; i++) {
       let a = segments[i].a;
       let b = segments[i].b;
-  
+
       let new_d = sdf_segment(p, a, b);
       let new_n = (b - a).yx * vec2(1.0, -1.0);
 
-      if (abs(new_d) < abs(d)) {
-        d = new_d;
-        n = new_n;
+      if (abs(new_d) < abs(d_c)) {
+        d_c = new_d;
+        n_c = new_n;
 
-        s = sign(dot(n, p - a));
+        s_c = sign(dot(n_c, p - a));
       }
 
-      if (abs(abs(new_d) - abs(d)) <= 0.001) {
-        let s_old = sign(dot(n, p - a));
+      if (abs(abs(new_d) - abs(d_c)) <= 0.001) {
+        let s_old = sign(dot(n_c, p - a));
         let s_new = sign(dot(new_n, p - a));
 
         if (s_old != s_new) {
-          d = new_d;
-          n = normalize(n) + normalize(new_n);
+          d_c = new_d;
+          n_c = normalize(n_c) + normalize(new_n);
 
-          s = sign(dot(n, p - a));
+          s_c = sign(dot(n_c, p - a));
         }
 
       }
 
-      n += normalize(new_n) / new_d;
+      n_c += normalize(new_n) / new_d;
+    }
+
+    if (d_c < d) {
+      d = d_c;
+      n = n_c;
+      s = s_c;
+    }
   }
+
 
   return d * s;
 }
@@ -78,6 +94,7 @@ fn vs_main(
 @fragment
 fn fs_main(in: VertexOutput) -> @location(0) vec4<f32> {
   let uv = in.color.xy;
+  let _k = contour_markers[0];
 
   let d = sdf(uv * 1000.0);
   
