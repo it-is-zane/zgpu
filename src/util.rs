@@ -15,6 +15,10 @@ pub fn insync<T>(mut future: impl std::future::Future<Output = T>) -> T {
     }
 }
 
+pub trait AsBytes<'a> {
+    fn as_bytes(&'a self) -> &'a [u8];
+}
+
 pub unsafe fn as_u8_slice<T: Sized>(p: &T) -> &[u8] {
     core::slice::from_raw_parts((p as *const T) as *const u8, core::mem::size_of::<T>())
 }

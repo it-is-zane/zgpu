@@ -64,6 +64,7 @@ pub struct App<'a> {
     add_event_handler_queue: Vec<Box<dyn Fn(&Gpu, &WindowBundle) -> EventHandlerPtr>>,
     windows:
         std::collections::HashMap<winit::window::WindowId, (WindowBundle<'a>, EventHandlerPtr)>,
+    dead_windows: Vec<WindowBundle<'a>>,
 }
 
 impl App<'_> {
@@ -105,6 +106,7 @@ impl App<'_> {
             },
             add_event_handler_queue: Vec::new(),
             windows: std::collections::HashMap::new(),
+            dead_windows: Vec::new(),
         }
     }
 
@@ -153,7 +155,7 @@ impl App<'_> {
             .find(|f| f.is_srgb())
             .unwrap_or(&config.format);
 
-        config.alpha_mode = wgpu::CompositeAlphaMode::Inherit;
+        config.alpha_mode = wgpu::CompositeAlphaMode::PreMultiplied;
 
         surface.configure(&self.gpu.device, &config);
 
@@ -203,7 +205,10 @@ impl winit::application::ApplicationHandler for App<'_> {
 
             match command {
                 Command::DeleteWindow(window_id) => {
-                    self.windows.remove(&window_id);
+                    if let Some((bundle, handler)) = self.windows.remove(&window_id) {
+                        drop(handler);
+                        self.dead_windows.push(bundle);
+                    }
                 }
                 Command::CreateWindow(event_handler) => {
                     self.create_window(event_loop, &event_handler);

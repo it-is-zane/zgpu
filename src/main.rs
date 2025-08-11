@@ -1,20 +1,28 @@
 #![warn(clippy::all, clippy::pedantic)]
 
-use image::EncodableLayout;
-
 mod app;
 mod app_structure;
 mod imgui_platform_impl;
+mod math;
 mod render_pipeline;
 mod renderer_backend;
+mod shader;
+mod text;
 mod util;
+
+use crate::text::Line;
+use image::EncodableLayout;
+use wgpu::util::DeviceExt;
 
 struct DevEvents {
     pipeline: wgpu::RenderPipeline,
+    #[allow(dead_code)]
+    rect_buffer: wgpu::Buffer,
     text_bind_group: wgpu::BindGroup,
-    start_time: std::time::Instant,
 }
+
 impl DevEvents {
+    #[allow(clippy::too_many_lines)]
     fn new(gpu: &app::Gpu, window: &app::WindowBundle) -> DevEvents {
         let module = &gpu
             .device
@@ -29,6 +37,10 @@ impl DevEvents {
                 compilation_options: wgpu::PipelineCompilationOptions::default(),
                 buffers: &[],
             })
+            .add_primitive(wgpu::PrimitiveState {
+                topology: wgpu::PrimitiveTopology::TriangleStrip,
+                ..Default::default()
+            })
             .add_fragment(wgpu::FragmentState {
                 module,
                 entry_point: Some("fs_main"),
@@ -41,13 +53,11 @@ impl DevEvents {
             })
             .build();
 
-        let image = image::open("src/atlas.png").unwrap().to_rgba8();
-
         let texture = &gpu.device.create_texture(&wgpu::TextureDescriptor {
             label: Some("font atlas"),
             size: wgpu::Extent3d {
-                width: image.width(),
-                height: image.height(),
+                width: text::ATLAS.width(),
+                height: text::ATLAS.height(),
                 depth_or_array_layers: 1,
             },
             mip_level_count: 1,
@@ -61,19 +71,19 @@ impl DevEvents {
         gpu.queue.write_texture(
             wgpu::TexelCopyTextureInfo {
                 texture,
-                mip_level: 1,
+                mip_level: 0,
                 origin: wgpu::Origin3d::ZERO,
                 aspect: wgpu::TextureAspect::All,
             },
-            image.as_bytes(),
+            text::ATLAS.as_bytes(),
             wgpu::TexelCopyBufferLayout {
                 offset: 0,
-                bytes_per_row: Some(image.width()),
-                rows_per_image: Some(image.width()),
+                bytes_per_row: Some(text::ATLAS.width() * 4),
+                rows_per_image: Some(text::ATLAS.width()),
             },
             wgpu::Extent3d {
-                width: image.width(),
-                height: image.height(),
+                width: text::ATLAS.width(),
+                height: text::ATLAS.height(),
                 depth_or_array_layers: 1,
             },
         );
@@ -89,6 +99,16 @@ impl DevEvents {
             ..Default::default()
         });
 
+        let mut line = Line::new("'Zane Gant'");
+
+        let rect_buffer = gpu
+            .device
+            .create_buffer_init(&wgpu::util::BufferInitDescriptor {
+                label: Some("text rect buffer"),
+                contents: line.as_bytes(),
+                usage: wgpu::BufferUsages::STORAGE,
+            });
+
         let text_bind_group = gpu.device.create_bind_group(&wgpu::BindGroupDescriptor {
             label: Some("text bind group"),
             layout: &pipeline.get_bind_group_layout(0),
@@ -103,20 +123,21 @@ impl DevEvents {
                     binding: 1,
                     resource: wgpu::BindingResource::Sampler(sampler),
                 },
+                wgpu::BindGroupEntry {
+                    binding: 2,
+                    resource: rect_buffer.as_entire_binding(),
+                },
             ],
         });
 
-        let mut dev_events = DevEvents {
+        DevEvents {
             pipeline,
+            rect_buffer,
             text_bind_group,
-            start_time: std::time::Instant::now(),
-        };
-
-        dev_events
+        }
     }
 }
 
-#[allow(clippy::too_many_lines)]
 impl app::EventHandler for DevEvents {
     fn window_event(
         &mut self,
@@ -175,6 +196,8 @@ impl app::EventHandler for DevEvents {
                 window_bundle
                     .surface
                     .configure(&gpu.device, &window_bundle.config);
+
+                // window_bundle.window.request_redraw();
             }
             winit::event::WindowEvent::RedrawRequested => {
                 let mut ce = gpu
@@ -194,7 +217,7 @@ impl app::EventHandler for DevEvents {
                                 .create_view(&wgpu::TextureViewDescriptor::default()),
                             resolve_target: None,
                             ops: wgpu::Operations {
-                                load: wgpu::LoadOp::Clear(wgpu::Color::BLACK),
+                                load: wgpu::LoadOp::Clear(wgpu::Color::RED),
                                 store: wgpu::StoreOp::Store,
                             },
                         })],
@@ -203,7 +226,7 @@ impl app::EventHandler for DevEvents {
 
                     pass.set_pipeline(&self.pipeline);
                     pass.set_bind_group(0, &self.text_bind_group, &[]);
-                    pass.draw(0..3, 0..1);
+                    pass.draw(0..4, 0..11);
                 }
 
                 gpu.queue.submit([ce.finish()]);

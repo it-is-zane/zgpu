@@ -12,3 +12,4 @@ font = "0.40.0"
 imgui = "0.12.0"
 ttf-parser = "0.25.1"
 toml = "0.8.23"
+serde = { version = "1.0.219", features = ["derive"] }
