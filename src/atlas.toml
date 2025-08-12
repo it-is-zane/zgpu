@@ -1,3705 +1,1810 @@
-[N]
-nameId = "Comfortaa-Regular-U004E"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[N.origin]
-x = 0
-y = 0
-
-[N.position]
-x = 847
-y = 313
-
-[N.sourceSize]
-width = 102
-height = 127
-
-[N.trimRec]
-x = 0
-y = 0
-width = 102
-height = 127
-
-[N.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[N.char]
-value = 78
-advanceX = 133
-
-[N.char.offset]
-x = 16
-y = 15
-
-[-]
-nameId = "Comfortaa-Regular-U002D"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[-.origin]
-x = 0
-y = 0
-
-[-.position]
-x = 379
-y = 918
-
-[-.sourceSize]
-width = 51
-height = 14
-
-[-.trimRec]
-x = 0
-y = 0
-width = 51
-height = 14
-
-[-.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[-.char]
-value = 45
-advanceX = 63
-
-[-.char.offset]
-x = 6
-y = 91
-
-[l]
-nameId = "Comfortaa-Regular-U006C"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[l.origin]
-x = 0
-y = 0
-
-[l.position]
-x = 932
-y = 570
-
-[l.sourceSize]
-width = 32
-height = 127
-
-[l.trimRec]
-x = 0
-y = 0
-width = 32
-height = 127
-
-[l.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[l.char]
-value = 108
-advanceX = 45
-
-[l.char.offset]
-x = 11
-y = 15
-
-[C]
-nameId = "Comfortaa-Regular-U0043"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[C.origin]
-x = 0
-y = 0
-
-[C.position]
-x = 850
-y = 1
-
-[C.sourceSize]
-width = 106
-height = 130
-
-[C.trimRec]
-x = 0
-y = 0
-width = 106
-height = 130
-
-[C.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[C.char]
-value = 67
-advanceX = 123
-
-[C.char.offset]
-x = 10
-y = 14
-
-[V]
-nameId = "Comfortaa-Regular-U0056"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[V.origin]
-x = 0
-y = 0
-
-[V.position]
-x = 642
-y = 442
-
-[V.sourceSize]
-width = 113
-height = 127
-
-[V.trimRec]
-x = 0
-y = 0
-width = 113
-height = 127
-
-[V.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[V.char]
-value = 86
-advanceX = 115
-
-[V.char.offset]
-x = 1
-y = 15
-
-[d]
-nameId = "Comfortaa-Regular-U0064"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[d.origin]
-x = 0
-y = 0
-
-[d.position]
-x = 354
-y = 313
-
-[d.sourceSize]
-width = 91
-height = 128
-
-[d.trimRec]
-x = 0
-y = 0
-width = 91
-height = 128
-
-[d.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[d.char]
-value = 100
-advanceX = 114
-
-[d.char.offset]
-x = 9
-y = 15
-
-[u]
-nameId = "Comfortaa-Regular-U0075"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[u.origin]
-x = 0
-y = 0
-
-[u.position]
-x = 556
-y = 826
-
-[u.sourceSize]
-width = 83
-height = 90
-
-[u.trimRec]
-x = 0
-y = 0
-width = 83
-height = 90
-
-[u.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[u.char]
-value = 117
-advanceX = 109
-
-[u.char.offset]
-x = 12
-y = 53
-
-[3]
-nameId = "Comfortaa-Regular-U0033"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[3.origin]
-x = 0
-y = 0
-
-[3.position]
-x = 872
-y = 182
-
-[3.sourceSize]
-width = 80
-height = 128
-
-[3.trimRec]
-x = 0
-y = 0
-width = 80
-height = 128
-
-[3.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[3.char]
-value = 51
-advanceX = 94
-
-[3.char.offset]
-x = 8
-y = 15
-
-[v]
-nameId = "Comfortaa-Regular-U0076"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[v.origin]
-x = 0
-y = 0
-
-[v.position]
-x = 199
-y = 826
-
-[v.sourceSize]
-width = 87
-height = 90
-
-[v.trimRec]
-x = 0
-y = 0
-width = 87
-height = 90
-
-[v.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[v.char]
-value = 118
-advanceX = 89
-
-[v.char.offset]
-x = 1
-y = 52
-
-[5]
-nameId = "Comfortaa-Regular-U0035"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[5.origin]
-x = 0
-y = 0
-
-[5.position]
-x = 1
-y = 442
-
-[5.sourceSize]
-width = 83
-height = 127
-
-[5.trimRec]
-x = 0
-y = 0
-width = 83
-height = 127
-
-[5.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[5.char]
-value = 53
-advanceX = 101
-
-[5.char.offset]
-x = 10
-y = 15
-
-[6]
-nameId = "Comfortaa-Regular-U0036"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[6.origin]
-x = 0
-y = 0
-
-[6.position]
-x = 166
-y = 442
-
-[6.sourceSize]
-width = 77
-height = 127
-
-[6.trimRec]
-x = 0
-y = 0
-width = 77
-height = 127
-
-[6.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[6.char]
-value = 54
-advanceX = 93
-
-[6.char.offset]
-x = 10
-y = 15
-
-["%"]
-nameId = "Comfortaa-Regular-U0025"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["%".origin]
-x = 0
-y = 0
-
-["%".position]
-x = 511
-y = 442
-
-["%".sourceSize]
-width = 130
-height = 127
-
-["%".trimRec]
-x = 0
-y = 0
-width = 130
-height = 127
-
-["%".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["%".char]
-value = 37
-advanceX = 138
-
-["%".char.offset]
-x = 5
-y = 15
-
-[7]
-nameId = "Comfortaa-Regular-U0037"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[7.origin]
-x = 0
-y = 0
-
-[7.position]
-x = 328
-y = 442
-
-[7.sourceSize]
-width = 79
-height = 127
-
-[7.trimRec]
-x = 0
-y = 0
-width = 79
-height = 127
-
-[7.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[7.char]
-value = 55
-advanceX = 91
-
-[7.char.offset]
-x = 7
-y = 15
-
-[y]
-nameId = "Comfortaa-Regular-U0079"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[y.origin]
-x = 0
-y = 0
-
-[y.position]
-x = 559
-y = 182
-
-[y.sourceSize]
-width = 87
-height = 129
-
-[y.trimRec]
-x = 0
-y = 0
-width = 87
-height = 129
-
-[y.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[y.char]
-value = 121
-advanceX = 88
-
-[y.char.offset]
-x = 2
-y = 52
-
-["}"]
-nameId = "Comfortaa-Regular-U007D"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["}".origin]
-x = 0
-y = 0
-
-["}".position]
-x = 427
-y = 1
-
-["}".sourceSize]
-width = 51
-height = 165
-
-["}".trimRec]
-x = 0
-y = 0
-width = 51
-height = 165
-
-["}".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["}".char]
-value = 125
-advanceX = 61
-
-["}".char.offset]
-x = 2
-y = 15
-
-[","]
-nameId = "Comfortaa-Regular-U002C"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[",".origin]
-x = 0
-y = 0
-
-[",".position]
-x = 187
-y = 918
-
-[",".sourceSize]
-width = 21
-height = 44
-
-[",".trimRec]
-x = 0
-y = 0
-width = 21
-height = 44
-
-[",".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[",".char]
-value = 44
-advanceX = 36
-
-[",".char.offset]
-x = 8
-y = 125
-
-[0]
-nameId = "Comfortaa-Regular-U0030"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[0.origin]
-x = 0
-y = 0
-
-[0.position]
-x = 292
-y = 570
-
-[0.sourceSize]
-width = 77
-height = 127
-
-[0.trimRec]
-x = 0
-y = 0
-width = 77
-height = 127
-
-[0.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[0.char]
-value = 48
-advanceX = 92
-
-[0.char.offset]
-x = 8
-y = 15
-
-[";"]
-nameId = "Comfortaa-Regular-U003B"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[";".origin]
-x = 0
-y = 0
-
-[";".position]
-x = 590
-y = 698
-
-[";".sourceSize]
-width = 24
-height = 115
-
-[";".trimRec]
-x = 0
-y = 0
-width = 24
-height = 115
-
-[";".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[";".char]
-value = 59
-advanceX = 32
-
-[";".char.offset]
-x = 5
-y = 54
-
-["`"]
-nameId = "Comfortaa-Regular-U0060"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["`".origin]
-x = 0
-y = 0
-
-["`".position]
-x = 258
-y = 918
-
-["`".sourceSize]
-width = 32
-height = 32
-
-["`".trimRec]
-x = 0
-y = 0
-width = 32
-height = 32
-
-["`".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["`".char]
-value = 96
-advanceX = 44
-
-["`".char.offset]
-x = 6
-y = 15
-
-[a]
-nameId = "Comfortaa-Regular-U0061"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[a.origin]
-x = 0
-y = 0
-
-[a.position]
-x = 923
-y = 698
-
-[a.sourceSize]
-width = 91
-height = 91
-
-[a.trimRec]
-x = 0
-y = 0
-width = 91
-height = 91
-
-[a.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[a.char]
-value = 97
-advanceX = 109
-
-[a.char.offset]
-x = 9
-y = 52
-
-[q]
-nameId = "Comfortaa-Regular-U0071"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[q.origin]
-x = 0
-y = 0
-
-[q.position]
-x = 93
-y = 313
-
-[q.sourceSize]
-width = 91
-height = 128
-
-[q.trimRec]
-x = 0
-y = 0
-width = 91
-height = 128
-
-[q.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[q.char]
-value = 113
-advanceX = 114
-
-[q.char.offset]
-x = 9
-y = 52
-
-[t]
-nameId = "Comfortaa-Regular-U0074"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[t.origin]
-x = 0
-y = 0
-
-[t.position]
-x = 532
-y = 698
-
-[t.sourceSize]
-width = 57
-height = 117
-
-[t.trimRec]
-x = 0
-y = 0
-width = 57
-height = 117
-
-[t.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[t.char]
-value = 116
-advanceX = 64
-
-[t.char.offset]
-x = 3
-y = 25
-
-[F]
-nameId = "Comfortaa-Regular-U0046"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[F.origin]
-x = 0
-y = 0
-
-[F.position]
-x = 91
-y = 698
-
-[F.sourceSize]
-width = 89
-height = 127
-
-[F.trimRec]
-x = 0
-y = 0
-width = 89
-height = 127
-
-[F.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[F.char]
-value = 70
-advanceX = 100
-
-[F.char.offset]
-x = 6
-y = 15
-
-["("]
-nameId = "Comfortaa-Regular-U0028"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["(".origin]
-x = 0
-y = 0
-
-["(".position]
-x = 49
-y = 1
-
-["(".sourceSize]
-width = 32
-height = 165
-
-["(".trimRec]
-x = 0
-y = 0
-width = 32
-height = 165
-
-["(".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["(".char]
-value = 40
-advanceX = 41
-
-["(".char.offset]
-x = 8
-y = 15
-
-["#"]
-nameId = "Comfortaa-Regular-U0023"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["#".origin]
-x = 0
-y = 0
-
-["#".position]
-x = 446
-y = 313
-
-["#".sourceSize]
-width = 102
-height = 128
-
-["#".trimRec]
-x = 0
-y = 0
-width = 102
-height = 128
-
-["#".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["#".char]
-value = 35
-advanceX = 116
-
-["#".char.offset]
-x = 8
-y = 14
-
-[")"]
-nameId = "Comfortaa-Regular-U0029"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[")".origin]
-x = 0
-y = 0
-
-[")".position]
-x = 82
-y = 1
-
-[")".sourceSize]
-width = 32
-height = 165
-
-[")".trimRec]
-x = 0
-y = 0
-width = 32
-height = 165
-
-[")".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[")".char]
-value = 41
-advanceX = 41
-
-[")".char.offset]
-x = 1
-y = 15
-
-[D]
-nameId = "Comfortaa-Regular-U0044"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[D.origin]
-x = 0
-y = 0
-
-[D.position]
-x = 832
-y = 570
-
-[D.sourceSize]
-width = 99
-height = 127
-
-[D.trimRec]
-x = 0
-y = 0
-width = 99
-height = 127
-
-[D.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[D.char]
-value = 68
-advanceX = 124
-
-[D.char.offset]
-x = 16
-y = 15
-
-[Z]
-nameId = "Comfortaa-Regular-U005A"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[Z.origin]
-x = 0
-y = 0
-
-[Z.position]
-x = 109
-y = 570
-
-[Z.sourceSize]
-width = 105
-height = 127
-
-[Z.trimRec]
-x = 0
-y = 0
-width = 105
-height = 127
-
-[Z.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[Z.char]
-value = 90
-advanceX = 116
-
-[Z.char.offset]
-x = 6
-y = 15
-
-["^"]
-nameId = "Comfortaa-Regular-U005E"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["^".origin]
-x = 0
-y = 0
-
-["^".position]
-x = 1
-y = 918
-
-["^".sourceSize]
-width = 64
-height = 52
-
-["^".trimRec]
-x = 0
-y = 0
-width = 64
-height = 52
-
-["^".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["^".char]
-value = 94
-advanceX = 75
-
-["^".char.offset]
-x = 6
-y = 15
-
-[":"]
-nameId = "Comfortaa-Regular-U003A"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[":".origin]
-x = 0
-y = 0
-
-[":".position]
-x = 178
-y = 826
-
-[":".sourceSize]
-width = 20
-height = 91
-
-[":".trimRec]
-x = 0
-y = 0
-width = 20
-height = 91
-
-[":".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[":".char]
-value = 58
-advanceX = 31
-
-[":".char.offset]
-x = 5
-y = 54
-
-[c]
-nameId = "Comfortaa-Regular-U0063"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[c.origin]
-x = 0
-y = 0
-
-[c.position]
-x = 843
-y = 698
-
-[c.sourceSize]
-width = 79
-height = 91
-
-[c.trimRec]
-x = 0
-y = 0
-width = 79
-height = 91
-
-[c.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[c.char]
-value = 99
-advanceX = 96
-
-[c.char.offset]
-x = 9
-y = 52
-
-[z]
-nameId = "Comfortaa-Regular-U007A"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[z.origin]
-x = 0
-y = 0
-
-[z.position]
-x = 839
-y = 826
-
-[z.sourceSize]
-width = 73
-height = 89
-
-[z.trimRec]
-x = 0
-y = 0
-width = 73
-height = 89
-
-[z.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[z.char]
-value = 122
-advanceX = 88
-
-[z.char.offset]
-x = 9
-y = 53
-
-["<"]
-nameId = "Comfortaa-Regular-U003C"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["<".origin]
-x = 0
-y = 0
-
-["<".position]
-x = 692
-y = 698
-
-["<".sourceSize]
-width = 76
-height = 93
-
-["<".trimRec]
-x = 0
-y = 0
-width = 76
-height = 93
-
-["<".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["<".char]
-value = 60
-advanceX = 88
-
-["<".char.offset]
-x = 6
-y = 39
-
-["'"]
-nameId = "Comfortaa-Regular-U0027"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["'".origin]
-x = 0
-y = 0
-
-["'".position]
-x = 243
-y = 918
-
-["'".sourceSize]
-width = 14
-height = 36
-
-["'".trimRec]
-x = 0
-y = 0
-width = 14
-height = 36
-
-["'".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["'".char]
-value = 39
-advanceX = 25
-
-["'".char.offset]
-x = 6
-y = 15
-
-[H]
-nameId = "Comfortaa-Regular-U0048"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[H.origin]
-x = 0
-y = 0
-
-[H.position]
-x = 201
-y = 698
-
-[H.sourceSize]
-width = 105
-height = 127
-
-[H.trimRec]
-x = 0
-y = 0
-width = 105
-height = 127
-
-[H.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[H.char]
-value = 72
-advanceX = 136
-
-[H.char.offset]
-x = 16
-y = 15
-
-[x]
-nameId = "Comfortaa-Regular-U0078"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[x.origin]
-x = 0
-y = 0
-
-[x.position]
-x = 640
-y = 826
-
-[x.sourceSize]
-width = 81
-height = 89
-
-[x.trimRec]
-x = 0
-y = 0
-width = 81
-height = 89
-
-[x.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[x.char]
-value = 120
-advanceX = 88
-
-[x.char.offset]
-x = 4
-y = 53
-
-["|"]
-nameId = "Comfortaa-Regular-U007C"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["|".origin]
-x = 0
-y = 0
-
-["|".position]
-x = 413
-y = 1
-
-["|".sourceSize]
-width = 13
-height = 165
-
-["|".trimRec]
-x = 0
-y = 0
-width = 13
-height = 165
-
-["|".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["|".char]
-value = 124
-advanceX = 63
-
-["|".char.offset]
-x = 25
-y = 15
-
-[s]
-nameId = "Comfortaa-Regular-U0073"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[s.origin]
-x = 0
-y = 0
-
-[s.position]
-x = 769
-y = 698
-
-[s.sourceSize]
-width = 73
-height = 91
-
-[s.trimRec]
-x = 0
-y = 0
-width = 73
-height = 91
-
-[s.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[s.char]
-value = 115
-advanceX = 87
-
-[s.char.offset]
-x = 8
-y = 52
-
-["/"]
-nameId = "Comfortaa-Regular-U002F"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["/".origin]
-x = 0
-y = 0
-
-["/".position]
-x = 678
-y = 1
-
-["/".sourceSize]
-width = 66
-height = 140
-
-["/".trimRec]
-x = 0
-y = 0
-width = 66
-height = 140
-
-["/".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["/".char]
-value = 47
-advanceX = 75
-
-["/".char.offset]
-x = 5
-y = 15
-
-[h]
-nameId = "Comfortaa-Regular-U0068"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[h.origin]
-x = 0
-y = 0
-
-[h.position]
-x = 670
-y = 570
-
-[h.sourceSize]
-width = 83
-height = 127
-
-[h.trimRec]
-x = 0
-y = 0
-width = 83
-height = 127
-
-[h.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[h.char]
-value = 104
-advanceX = 109
-
-[h.char.offset]
-x = 14
-y = 15
-
-[W]
-nameId = "Comfortaa-Regular-U0057"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[W.origin]
-x = 0
-y = 0
-
-[W.position]
-x = 756
-y = 442
-
-[W.sourceSize]
-width = 147
-height = 127
-
-[W.trimRec]
-x = 0
-y = 0
-width = 147
-height = 127
-
-[W.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[W.char]
-value = 87
-advanceX = 151
-
-[W.char.offset]
-x = 2
-y = 15
-
-[I]
-nameId = "Comfortaa-Regular-U0049"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[I.origin]
-x = 0
-y = 0
-
-[I.position]
-x = 307
-y = 698
-
-[I.sourceSize]
-width = 13
-height = 127
-
-[I.trimRec]
-x = 0
-y = 0
-width = 13
-height = 127
-
-[I.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[I.char]
-value = 73
-advanceX = 44
-
-[I.char.offset]
-x = 16
-y = 15
-
-["="]
-nameId = "Comfortaa-Regular-U003D"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["=".origin]
-x = 0
-y = 0
-
-["=".position]
-x = 66
-y = 918
-
-["=".sourceSize]
-width = 70
-height = 52
-
-["=".trimRec]
-x = 0
-y = 0
-width = 70
-height = 52
-
-["=".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["=".char]
-value = 61
-advanceX = 82
-
-["=".char.offset]
-x = 6
-y = 59
-
-["]"]
-nameId = "Comfortaa-Regular-U005D"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["]".origin]
-x = 0
-y = 0
-
-["]".position]
-x = 321
-y = 1
-
-["]".sourceSize]
-width = 39
-height = 165
-
-["]".trimRec]
-x = 0
-y = 0
-width = 39
-height = 165
-
-["]".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["]".char]
-value = 93
-advanceX = 48
-
-["]".char.offset]
-x = 0
-y = 15
-
-[Q]
-nameId = "Comfortaa-Regular-U0051"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[Q.origin]
-x = 0
-y = 0
-
-[Q.position]
-x = 238
-y = 182
-
-[Q.sourceSize]
-width = 129
-height = 130
-
-[Q.trimRec]
-x = 0
-y = 0
-width = 129
-height = 130
-
-[Q.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[Q.char]
-value = 81
-advanceX = 148
-
-[Q.char.offset]
-x = 10
-y = 14
-
-["+"]
-nameId = "Comfortaa-Regular-U002B"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["+".origin]
-x = 0
-y = 0
-
-["+".position]
-x = 913
-y = 826
-
-["+".sourceSize]
-width = 76
-height = 77
-
-["+".trimRec]
-x = 0
-y = 0
-width = 76
-height = 77
-
-["+".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["+".char]
-value = 43
-advanceX = 88
-
-["+".char.offset]
-x = 6
-y = 47
-
-[m]
-nameId = "Comfortaa-Regular-U006D"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[m.origin]
-x = 0
-y = 0
-
-[m.position]
-x = 429
-y = 826
-
-[m.sourceSize]
-width = 126
-height = 90
-
-[m.trimRec]
-x = 0
-y = 0
-width = 126
-height = 90
-
-[m.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[m.char]
-value = 109
-advanceX = 152
-
-[m.char.offset]
-x = 14
-y = 52
-
-["*"]
-nameId = "Comfortaa-Regular-U002A"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["*".origin]
-x = 0
-y = 0
-
-["*".position]
-x = 137
-y = 918
-
-["*".sourceSize]
-width = 49
-height = 48
-
-["*".trimRec]
-x = 0
-y = 0
-width = 49
-height = 48
-
-["*".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["*".char]
-value = 42
-advanceX = 61
-
-["*".char.offset]
-x = 7
-y = 15
-
-[9]
-nameId = "Comfortaa-Regular-U0039"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[9.origin]
-x = 0
-y = 0
-
-[9.position]
-x = 215
-y = 570
-
-[9.sourceSize]
-width = 76
-height = 127
-
-[9.trimRec]
-x = 0
-y = 0
-width = 76
-height = 127
-
-[9.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[9.char]
-value = 57
-advanceX = 93
-
-[9.char.offset]
-x = 7
-y = 15
-
-[g]
-nameId = "Comfortaa-Regular-U0067"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[g.origin]
-x = 0
-y = 0
-
-[g.position]
-x = 420
-y = 698
-
-[g.sourceSize]
-width = 91
-height = 125
-
-[g.trimRec]
-x = 0
-y = 0
-width = 91
-height = 125
-
-[g.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[g.char]
-value = 103
-advanceX = 109
-
-[g.char.offset]
-x = 9
-y = 52
-
-[i]
-nameId = "Comfortaa-Regular-U0069"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[i.origin]
-x = 0
-y = 0
-
-[i.position]
-x = 512
-y = 698
-
-[i.sourceSize]
-width = 19
-height = 123
-
-[i.trimRec]
-x = 0
-y = 0
-width = 19
-height = 123
-
-[i.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[i.char]
-value = 105
-advanceX = 46
-
-[i.char.offset]
-x = 14
-y = 19
-
-[j]
-nameId = "Comfortaa-Regular-U006A"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[j.origin]
-x = 0
-y = 0
-
-[j.position]
-x = 479
-y = 1
-
-[j.sourceSize]
-width = 48
-height = 161
-
-[j.trimRec]
-x = 0
-y = 0
-width = 48
-height = 161
-
-[j.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[j.char]
-value = 106
-advanceX = 46
-
-[j.char.offset]
-x = -16
-y = 19
-
-[2]
-nameId = "Comfortaa-Regular-U0032"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[2.origin]
-x = 0
-y = 0
-
-[2.position]
-x = 754
-y = 570
-
-[2.sourceSize]
-width = 77
-height = 127
-
-[2.trimRec]
-x = 0
-y = 0
-width = 77
-height = 127
-
-[2.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[2.char]
-value = 50
-advanceX = 93
-
-[2.char.offset]
-x = 10
-y = 15
-
-[L]
-nameId = "Comfortaa-Regular-U004C"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[L.origin]
-x = 0
-y = 0
-
-[L.position]
-x = 635
-y = 313
-
-[L.sourceSize]
-width = 83
-height = 127
-
-[L.trimRec]
-x = 0
-y = 0
-width = 83
-height = 127
-
-[L.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[L.char]
-value = 76
-advanceX = 102
-
-[L.char.offset]
-x = 16
-y = 15
-
-[P]
-nameId = "Comfortaa-Regular-U0050"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[P.origin]
-x = 0
-y = 0
-
-[P.position]
-x = 85
-y = 442
-
-[P.sourceSize]
-width = 80
-height = 127
-
-[P.trimRec]
-x = 0
-y = 0
-width = 80
-height = 127
-
-[P.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[P.char]
-value = 80
-advanceX = 98
-
-[P.char.offset]
-x = 16
-y = 15
-
-["~"]
-nameId = "Comfortaa-Regular-U007E"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["~".origin]
-x = 0
-y = 0
-
-["~".position]
-x = 291
-y = 918
-
-["~".sourceSize]
-width = 67
-height = 21
-
-["~".trimRec]
-x = 0
-y = 0
-width = 67
-height = 21
-
-["~".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["~".char]
-value = 126
-advanceX = 75
-
-["~".char.offset]
-x = 5
-y = 72
-
-["["]
-nameId = "Comfortaa-Regular-U005B"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["[".origin]
-x = 0
-y = 0
-
-["[".position]
-x = 281
-y = 1
-
-["[".sourceSize]
-width = 39
-height = 165
-
-["[".trimRec]
-x = 0
-y = 0
-width = 39
-height = 165
-
-["[".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["[".char]
-value = 91
-advanceX = 48
-
-["[".char.offset]
-x = 10
-y = 15
-
-["&"]
-nameId = "Comfortaa-Regular-U0026"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["&".origin]
-x = 0
-y = 0
-
-["&".position]
-x = 745
-y = 1
-
-["&".sourceSize]
-width = 104
-height = 130
-
-["&".trimRec]
-x = 0
-y = 0
-width = 104
-height = 130
-
-["&".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["&".char]
-value = 38
-advanceX = 116
-
-["&".char.offset]
-x = 7
-y = 14
-
-[A]
-nameId = "Comfortaa-Regular-U0041"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[A.origin]
-x = 0
-y = 0
-
-[A.position]
-x = 410
-y = 570
-
-[A.sourceSize]
-width = 112
-height = 127
-
-[A.trimRec]
-x = 0
-y = 0
-width = 112
-height = 127
-
-[A.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[A.char]
-value = 65
-advanceX = 113
-
-[A.char.offset]
-x = 1
-y = 15
-
-[M]
-nameId = "Comfortaa-Regular-U004D"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[M.origin]
-x = 0
-y = 0
-
-[M.position]
-x = 719
-y = 313
-
-[M.sourceSize]
-width = 127
-height = 127
-
-[M.trimRec]
-x = 0
-y = 0
-width = 127
-height = 127
-
-[M.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[M.char]
-value = 77
-advanceX = 158
-
-[M.char.offset]
-x = 16
-y = 15
-
-[E]
-nameId = "Comfortaa-Regular-U0045"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[E.origin]
-x = 0
-y = 0
-
-[E.position]
-x = 1
-y = 698
-
-[E.sourceSize]
-width = 89
-height = 127
-
-[E.trimRec]
-x = 0
-y = 0
-width = 89
-height = 127
-
-[E.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[E.char]
-value = 69
-advanceX = 111
-
-[E.char.offset]
-x = 16
-y = 15
-
-[O]
-nameId = "Comfortaa-Regular-U004F"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[O.origin]
-x = 0
-y = 0
-
-[O.position]
-x = 108
-y = 182
-
-[O.sourceSize]
-width = 129
-height = 130
-
-[O.trimRec]
-x = 0
-y = 0
-width = 129
-height = 130
-
-[O.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[O.char]
-value = 79
-advanceX = 148
-
-[O.char.offset]
-x = 10
-y = 14
-
-["."]
-nameId = "Comfortaa-Regular-U002E"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[".".origin]
-x = 0
-y = 0
-
-[".".position]
-x = 359
-y = 918
-
-[".".sourceSize]
-width = 19
-height = 20
-
-[".".trimRec]
-x = 0
-y = 0
-width = 19
-height = 20
-
-[".".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[".".char]
-value = 46
-advanceX = 34
-
-[".".char.offset]
-x = 8
-y = 125
-
-[T]
-nameId = "Comfortaa-Regular-U0054"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[T.origin]
-x = 0
-y = 0
-
-[T.position]
-x = 408
-y = 442
-
-[T.sourceSize]
-width = 102
-height = 127
-
-[T.trimRec]
-x = 0
-y = 0
-width = 102
-height = 127
-
-[T.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[T.char]
-value = 84
-advanceX = 105
-
-[T.char.offset]
-x = 2
-y = 15
-
-['\']
-nameId = "Comfortaa-Regular-U005C"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-['\'.origin]
-x = 0
-y = 0
-
-['\'.position]
-x = 613
-y = 1
-
-['\'.sourceSize]
-width = 64
-height = 140
-
-['\'.trimRec]
-x = 0
-y = 0
-width = 64
-height = 140
-
-['\'.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-['\'.char]
-value = 92
-advanceX = 75
-
-['\'.char.offset]
-x = 6
-y = 15
-
-[_]
-nameId = "Comfortaa-Regular-U005F"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[_.origin]
-x = 0
-y = 0
-
-[_.position]
-x = 431
-y = 918
-
-[_.sourceSize]
-width = 91
-height = 13
-
-[_.trimRec]
-x = 0
-y = 0
-width = 91
-height = 13
-
-[_.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[_.char]
-value = 95
-advanceX = 75
-
-[_.char.offset]
-x = -7
-y = 142
-
-[o]
-nameId = "Comfortaa-Regular-U006F"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[o.origin]
-x = 0
-y = 0
-
-[o.position]
-x = 1
-y = 826
-
-[o.sourceSize]
-width = 91
-height = 91
-
-[o.trimRec]
-x = 0
-y = 0
-width = 91
-height = 91
-
-[o.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[o.char]
-value = 111
-advanceX = 109
-
-[o.char.offset]
-x = 9
-y = 52
-
-[p]
-nameId = "Comfortaa-Regular-U0070"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[p.origin]
-x = 0
-y = 0
-
-[p.position]
-x = 1
-y = 313
-
-[p.sourceSize]
-width = 91
-height = 128
-
-[p.trimRec]
-x = 0
-y = 0
-width = 91
-height = 128
-
-[p.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[p.char]
-value = 112
-advanceX = 114
-
-[p.char.offset]
-x = 14
-y = 52
-
-[U]
-nameId = "Comfortaa-Regular-U0055"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[U.origin]
-x = 0
-y = 0
-
-[U.position]
-x = 457
-y = 182
-
-[U.sourceSize]
-width = 101
-height = 130
-
-[U.trimRec]
-x = 0
-y = 0
-width = 101
-height = 130
-
-[U.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[U.char]
-value = 85
-advanceX = 132
-
-[U.char.offset]
-x = 16
-y = 15
-
-[f]
-nameId = "Comfortaa-Regular-U0066"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[f.origin]
-x = 0
-y = 0
-
-[f.position]
-x = 612
-y = 570
-
-[f.sourceSize]
-width = 57
-height = 127
-
-[f.trimRec]
-x = 0
-y = 0
-width = 57
-height = 127
-
-[f.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[f.char]
-value = 102
-advanceX = 59
-
-[f.char.offset]
-x = 3
-y = 15
-
-[k]
-nameId = "Comfortaa-Regular-U006B"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[k.origin]
-x = 0
-y = 0
-
-[k.position]
-x = 801
-y = 182
-
-[k.sourceSize]
-width = 70
-height = 129
-
-[k.trimRec]
-x = 0
-y = 0
-width = 70
-height = 129
-
-[k.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[k.char]
-value = 107
-advanceX = 92
-
-[k.char.offset]
-x = 14
-y = 15
-
-[K]
-nameId = "Comfortaa-Regular-U004B"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[K.origin]
-x = 0
-y = 0
-
-[K.position]
-x = 549
-y = 313
-
-[K.sourceSize]
-width = 85
-height = 127
-
-[K.trimRec]
-x = 0
-y = 0
-width = 85
-height = 127
-
-[K.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[K.char]
-value = 75
-advanceX = 105
-
-[K.char.offset]
-x = 16
-y = 15
-
-[r]
-nameId = "Comfortaa-Regular-U0072"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[r.origin]
-x = 0
-y = 0
-
-[r.position]
-x = 287
-y = 826
-
-[r.sourceSize]
-width = 57
-height = 90
-
-[r.trimRec]
-x = 0
-y = 0
-width = 57
-height = 90
-
-[r.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[r.char]
-value = 114
-advanceX = 73
-
-[r.char.offset]
-x = 14
-y = 52
-
-[">"]
-nameId = "Comfortaa-Regular-U003E"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[">".origin]
-x = 0
-y = 0
-
-[">".position]
-x = 615
-y = 698
-
-[">".sourceSize]
-width = 76
-height = 93
-
-[">".trimRec]
-x = 0
-y = 0
-width = 76
-height = 93
-
-[">".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[">".char]
-value = 62
-advanceX = 88
-
-[">".char.offset]
-x = 6
-y = 39
-
-["!"]
-nameId = "Comfortaa-Regular-U0021"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["!".origin]
-x = 0
-y = 0
-
-["!".position]
-x = 181
-y = 698
-
-["!".sourceSize]
-width = 19
-height = 127
-
-["!".trimRec]
-x = 0
-y = 0
-width = 19
-height = 127
-
-["!".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["!".char]
-value = 33
-advanceX = 42
-
-["!".char.offset]
-x = 8
-y = 15
-
-[R]
-nameId = "Comfortaa-Regular-U0052"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[R.origin]
-x = 0
-y = 0
-
-[R.position]
-x = 244
-y = 442
-
-[R.sourceSize]
-width = 83
-height = 127
-
-[R.trimRec]
-x = 0
-y = 0
-width = 83
-height = 127
-
-[R.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[R.char]
-value = 82
-advanceX = 99
-
-[R.char.offset]
-x = 16
-y = 15
-
-[n]
-nameId = "Comfortaa-Regular-U006E"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[n.origin]
-x = 0
-y = 0
-
-[n.position]
-x = 345
-y = 826
-
-[n.sourceSize]
-width = 83
-height = 90
-
-[n.trimRec]
-x = 0
-y = 0
-width = 83
-height = 90
-
-[n.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[n.char]
-value = 110
-advanceX = 109
-
-[n.char.offset]
-x = 14
-y = 52
-
-[b]
-nameId = "Comfortaa-Regular-U0062"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[b.origin]
-x = 0
-y = 0
-
-[b.position]
-x = 262
-y = 313
-
-[b.sourceSize]
-width = 91
-height = 128
-
-[b.trimRec]
-x = 0
-y = 0
-width = 91
-height = 128
-
-[b.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[b.char]
-value = 98
-advanceX = 114
-
-[b.char.offset]
-x = 14
-y = 15
-
-[X]
-nameId = "Comfortaa-Regular-U0058"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[X.origin]
-x = 0
-y = 0
-
-[X.position]
-x = 904
-y = 442
-
-[X.sourceSize]
-width = 104
-height = 127
-
-[X.trimRec]
-x = 0
-y = 0
-width = 104
-height = 127
-
-[X.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[X.char]
-value = 88
-advanceX = 114
-
-[X.char.offset]
-x = 5
-y = 15
-
-[4]
-nameId = "Comfortaa-Regular-U0034"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[4.origin]
-x = 0
-y = 0
-
-[4.position]
-x = 321
-y = 698
-
-[4.sourceSize]
-width = 98
-height = 127
-
-[4.trimRec]
-x = 0
-y = 0
-width = 98
-height = 127
-
-[4.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[4.char]
-value = 52
-advanceX = 104
-
-[4.char.offset]
-x = 0
-y = 15
-
-["?"]
-nameId = "Comfortaa-Regular-U003F"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["?".origin]
-x = 0
-y = 0
-
-["?".position]
-x = 647
-y = 182
-
-["?".sourceSize]
-width = 76
-height = 129
-
-["?".trimRec]
-x = 0
-y = 0
-width = 76
-height = 129
-
-["?".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["?".char]
-value = 63
-advanceX = 88
-
-["?".char.offset]
-x = 6
-y = 13
-
-[e]
-nameId = "Comfortaa-Regular-U0065"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[e.origin]
-x = 0
-y = 0
-
-[e.position]
-x = 93
-y = 826
-
-[e.sourceSize]
-width = 84
-height = 91
-
-[e.trimRec]
-x = 0
-y = 0
-width = 84
-height = 91
-
-[e.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[e.char]
-value = 101
-advanceX = 99
-
-[e.char.offset]
-x = 9
-y = 52
-
-[w]
-nameId = "Comfortaa-Regular-U0077"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[w.origin]
-x = 0
-y = 0
-
-[w.position]
-x = 722
-y = 826
-
-[w.sourceSize]
-width = 116
-height = 89
-
-[w.trimRec]
-x = 0
-y = 0
-width = 116
-height = 89
-
-[w.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[w.char]
-value = 119
-advanceX = 119
-
-[w.char.offset]
-x = 2
-y = 53
-
-[Y]
-nameId = "Comfortaa-Regular-U0059"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[Y.origin]
-x = 0
-y = 0
-
-[Y.position]
-x = 1
-y = 570
-
-[Y.sourceSize]
-width = 107
-height = 127
-
-[Y.trimRec]
-x = 0
-y = 0
-width = 107
-height = 127
-
-[Y.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[Y.char]
-value = 89
-advanceX = 104
-
-[Y.char.offset]
-x = -1
-y = 15
-
-['"']
-nameId = "Comfortaa-Regular-U0022"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-['"'.origin]
-x = 0
-y = 0
-
-['"'.position]
-x = 209
-y = 918
-
-['"'.sourceSize]
-width = 33
-height = 36
-
-['"'.trimRec]
-x = 0
-y = 0
-width = 33
-height = 36
-
-['"'.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-['"'.char]
-value = 34
-advanceX = 44
-
-['"'.char.offset]
-x = 6
-y = 15
-
-["$"]
-nameId = "Comfortaa-Regular-U0024"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["$".origin]
-x = 0
-y = 0
-
-["$".position]
-x = 528
-y = 1
-
-["$".sourceSize]
-width = 84
-height = 154
-
-["$".trimRec]
-x = 0
-y = 0
-width = 84
-height = 154
-
-["$".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["$".char]
-value = 36
-advanceX = 96
-
-["$".char.offset]
-x = 6
-y = 4
-
-[B]
-nameId = "Comfortaa-Regular-U0042"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[B.origin]
-x = 0
-y = 0
-
-[B.position]
-x = 523
-y = 570
-
-[B.sourceSize]
-width = 88
-height = 127
-
-[B.trimRec]
-x = 0
-y = 0
-width = 88
-height = 127
-
-[B.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[B.char]
-value = 66
-advanceX = 112
-
-[B.char.offset]
-x = 16
-y = 15
-
-["@"]
-nameId = "Comfortaa-Regular-U0040"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["@".origin]
-x = 0
-y = 0
-
-["@".position]
-x = 115
-y = 1
-
-["@".sourceSize]
-width = 165
-height = 165
-
-["@".trimRec]
-x = 0
-y = 0
-width = 165
-height = 165
-
-["@".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["@".char]
-value = 64
-advanceX = 176
-
-["@".char.offset]
-x = 6
-y = 15
-
-[S]
-nameId = "Comfortaa-Regular-U0053"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[S.origin]
-x = 0
-y = 0
-
-[S.position]
-x = 368
-y = 182
-
-[S.sourceSize]
-width = 88
-height = 130
-
-[S.trimRec]
-x = 0
-y = 0
-width = 88
-height = 130
-
-[S.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[S.char]
-value = 83
-advanceX = 106
-
-[S.char.offset]
-x = 9
-y = 14
-
-[J]
-nameId = "Comfortaa-Regular-U004A"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[J.origin]
-x = 0
-y = 0
-
-[J.position]
-x = 724
-y = 182
-
-[J.sourceSize]
-width = 76
-height = 129
-
-[J.trimRec]
-x = 0
-y = 0
-width = 76
-height = 129
-
-[J.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[J.char]
-value = 74
-advanceX = 99
-
-[J.char.offset]
-x = 7
-y = 15
-
-[1]
-nameId = "Comfortaa-Regular-U0031"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[1.origin]
-x = 0
-y = 0
-
-[1.position]
-x = 370
-y = 570
-
-[1.sourceSize]
-width = 39
-height = 127
-
-[1.trimRec]
-x = 0
-y = 0
-width = 39
-height = 127
-
-[1.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[1.char]
-value = 49
-advanceX = 61
-
-[1.char.offset]
-x = 6
-y = 15
-
-[" "]
-nameId = "Comfortaa-Regular-U0020"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[" ".origin]
-x = 0
-y = 0
-
-[" ".position]
-x = 1
-y = 1
-
-[" ".sourceSize]
-width = 47
-height = 180
-
-[" ".trimRec]
-x = 0
-y = 0
-width = 47
-height = 180
-
-[" ".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[" ".char]
-value = 32
-advanceX = 47
-
-[" ".char.offset]
-x = 0
-y = 0
-
-[8]
-nameId = "Comfortaa-Regular-U0038"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[8.origin]
-x = 0
-y = 0
-
-[8.position]
-x = 185
-y = 313
-
-[8.sourceSize]
-width = 76
-height = 128
-
-[8.trimRec]
-x = 0
-y = 0
-width = 76
-height = 128
-
-[8.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[8.char]
-value = 56
-advanceX = 95
-
-[8.char.offset]
-x = 10
-y = 15
-
-["{"]
-nameId = "Comfortaa-Regular-U007B"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-["{".origin]
-x = 0
-y = 0
-
-["{".position]
-x = 361
-y = 1
-
-["{".sourceSize]
-width = 51
-height = 165
-
-["{".trimRec]
-x = 0
-y = 0
-width = 51
-height = 165
-
-["{".colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-["{".char]
-value = 123
-advanceX = 61
-
-["{".char.offset]
-x = 8
-y = 15
-
-[G]
-nameId = "Comfortaa-Regular-U0047"
-tag = ""
-padding = 0
-trimmed = false
-colliderType = 0
-
-[G.origin]
-x = 0
-y = 0
-
-[G.position]
-x = 1
-y = 182
-
-[G.sourceSize]
-width = 106
-height = 130
-
-[G.trimRec]
-x = 0
-y = 0
-width = 106
-height = 130
-
-[G.colliderInfo]
-x = 0
-y = 0
-width = 0
-height = 0
-
-[G.char]
-value = 71
-advanceX = 123
-
-[G.char.offset]
-x = 10
-y = 14
+font_size = 180.0
 
+[size]
+x = 1024.0
+y = 1024.0
+
+[char_data.w]
+advance = 0.1162109375
+
+[char_data.w.tex_rect.start]
+x = 0.001953125
+y = -0.138671875
+
+[char_data.w.tex_rect.end]
+x = 0.115234375
+y = -0.0517578125
+
+[char_data.w.tex_rect.start_uv]
+x = 0.705078125
+y = 0.8935546875
+
+[char_data.w.tex_rect.end_uv]
+x = 0.818359375
+y = 0.806640625
+
+[char_data.X]
+advance = 0.111328125
+
+[char_data.X.tex_rect.start]
+x = 0.0048828125
+y = -0.138671875
+
+[char_data.X.tex_rect.end]
+x = 0.1064453125
+y = -0.0146484375
+
+[char_data.X.tex_rect.start_uv]
+x = 0.8828125
+y = 0.5556640625
+
+[char_data.X.tex_rect.end_uv]
+x = 0.984375
+y = 0.431640625
+
+[char_data.O]
+advance = 0.14453125
+
+[char_data.O.tex_rect.start]
+x = 0.009765625
+y = -0.140625
+
+[char_data.O.tex_rect.end]
+x = 0.1357421875
+y = -0.013671875
+
+[char_data.O.tex_rect.start_uv]
+x = 0.10546875
+y = 0.3046875
+
+[char_data.O.tex_rect.end_uv]
+x = 0.2314453125
+y = 0.177734375
+
+[char_data.m]
+advance = 0.1484375
+
+[char_data.m.tex_rect.start]
+x = 0.013671875
+y = -0.138671875
+
+[char_data.m.tex_rect.end]
+x = 0.13671875
+y = -0.05078125
+
+[char_data.m.tex_rect.start_uv]
+x = 0.4189453125
+y = 0.89453125
+
+[char_data.m.tex_rect.end_uv]
+x = 0.5419921875
+y = 0.806640625
+
+[char_data.z]
+advance = 0.0859375
+
+[char_data.z.tex_rect.start]
+x = 0.0087890625
+y = -0.138671875
+
+[char_data.z.tex_rect.end]
+x = 0.080078125
+y = -0.0517578125
+
+[char_data.z.tex_rect.start_uv]
+x = 0.8193359375
+y = 0.8935546875
+
+[char_data.z.tex_rect.end_uv]
+x = 0.890625
+y = 0.806640625
+
+[char_data.C]
+advance = 0.1201171875
+
+[char_data.C.tex_rect.start]
+x = 0.009765625
+y = -0.140625
+
+[char_data.C.tex_rect.end]
+x = 0.11328125
+y = -0.013671875
+
+[char_data.C.tex_rect.start_uv]
+x = 0.830078125
+y = 0.1279296875
+
+[char_data.C.tex_rect.end_uv]
+x = 0.93359375
+y = 0.0009765625
+
+[char_data.8]
+advance = 0.0927734375
+
+[char_data.8.tex_rect.start]
+x = 0.009765625
+y = -0.1396484375
+
+[char_data.8.tex_rect.end]
+x = 0.083984375
+y = -0.0146484375
+
+[char_data.8.tex_rect.start_uv]
+x = 0.1806640625
+y = 0.4306640625
+
+[char_data.8.tex_rect.end_uv]
+x = 0.2548828125
+y = 0.3056640625
+
+[char_data.R]
+advance = 0.0966796875
+
+[char_data.R.tex_rect.start]
+x = 0.015625
+y = -0.138671875
+
+[char_data.R.tex_rect.end]
+x = 0.0966796875
+y = -0.0146484375
+
+[char_data.R.tex_rect.start_uv]
+x = 0.23828125
+y = 0.5556640625
+
+[char_data.R.tex_rect.end_uv]
+x = 0.3193359375
+y = 0.431640625
+
+[char_data.E]
+advance = 0.1083984375
+
+[char_data.E.tex_rect.start]
+x = 0.015625
+y = -0.138671875
+
+[char_data.E.tex_rect.end]
+x = 0.1025390625
+y = -0.0146484375
+
+[char_data.E.tex_rect.start_uv]
+x = 0.0009765625
+y = 0.8056640625
+
+[char_data.E.tex_rect.end_uv]
+x = 0.087890625
+y = 0.681640625
+
+[char_data."!"]
+advance = 0.041015625
+
+[char_data."!".tex_rect.start]
+x = 0.0078125
+y = -0.138671875
+
+[char_data."!".tex_rect.end]
+x = 0.0263671875
+y = -0.0146484375
+
+[char_data."!".tex_rect.start_uv]
+x = 0.1767578125
+y = 0.8056640625
+
+[char_data."!".tex_rect.end_uv]
+x = 0.1953125
+y = 0.681640625
+
+[char_data.l]
+advance = 0.0439453125
+
+[char_data.l.tex_rect.start]
+x = 0.0107421875
+y = -0.138671875
+
+[char_data.l.tex_rect.end]
+x = 0.0419921875
+y = -0.0146484375
+
+[char_data.l.tex_rect.start_uv]
+x = 0.91015625
+y = 0.6806640625
+
+[char_data.l.tex_rect.end_uv]
+x = 0.94140625
+y = 0.556640625
+
+[char_data.2]
+advance = 0.0908203125
+
+[char_data.2.tex_rect.start]
+x = 0.009765625
+y = -0.138671875
+
+[char_data.2.tex_rect.end]
+x = 0.0849609375
+y = -0.0146484375
+
+[char_data.2.tex_rect.start_uv]
+x = 0.736328125
+y = 0.6806640625
+
+[char_data.2.tex_rect.end_uv]
+x = 0.8115234375
+y = 0.556640625
+
+[char_data."@"]
+advance = 0.171875
+
+[char_data."@".tex_rect.start]
+x = 0.005859375
+y = -0.17578125
+
+[char_data."@".tex_rect.end]
+x = 0.1669921875
+y = -0.0146484375
+
+[char_data."@".tex_rect.start_uv]
+x = 0.1123046875
+y = 0.162109375
+
+[char_data."@".tex_rect.end_uv]
+x = 0.2734375
+y = 0.0009765625
+
+[char_data."$"]
+advance = 0.09375
+
+[char_data."$".tex_rect.start]
+x = 0.005859375
+y = -0.154296875
+
+[char_data."$".tex_rect.end]
+x = 0.087890625
+y = -0.00390625
+
+[char_data."$".tex_rect.start_uv]
+x = 0.515625
+y = 0.1513671875
+
+[char_data."$".tex_rect.end_uv]
+x = 0.59765625
+y = 0.0009765625
+
+[char_data.J]
+advance = 0.0966796875
+
+[char_data.J.tex_rect.start]
+x = 0.0068359375
+y = -0.140625
+
+[char_data.J.tex_rect.end]
+x = 0.0810546875
+y = -0.0146484375
+
+[char_data.J.tex_rect.start_uv]
+x = 0.70703125
+y = 0.3037109375
+
+[char_data.J.tex_rect.end_uv]
+x = 0.78125
+y = 0.177734375
+
+[char_data.f]
+advance = 0.0576171875
+
+[char_data.f.tex_rect.start]
+x = 0.0029296875
+y = -0.138671875
+
+[char_data.f.tex_rect.end]
+x = 0.05859375
+y = -0.0146484375
+
+[char_data.f.tex_rect.start_uv]
+x = 0.59765625
+y = 0.6806640625
+
+[char_data.f.tex_rect.end_uv]
+x = 0.6533203125
+y = 0.556640625
+
+[char_data.u]
+advance = 0.1064453125
+
+[char_data.u.tex_rect.start]
+x = 0.01171875
+y = -0.1396484375
+
+[char_data.u.tex_rect.end]
+x = 0.0927734375
+y = -0.0517578125
+
+[char_data.u.tex_rect.start_uv]
+x = 0.54296875
+y = 0.89453125
+
+[char_data.u.tex_rect.end_uv]
+x = 0.6240234375
+y = 0.806640625
+
+[char_data.q]
+advance = 0.111328125
+
+[char_data.q.tex_rect.start]
+x = 0.0087890625
+y = -0.17578125
+
+[char_data.q.tex_rect.end]
+x = 0.09765625
+y = -0.05078125
+
+[char_data.q.tex_rect.start_uv]
+x = 0.0908203125
+y = 0.4306640625
+
+[char_data.q.tex_rect.end_uv]
+x = 0.1796875
+y = 0.3056640625
+
+[char_data."."]
+advance = 0.033203125
+
+[char_data.".".tex_rect.start]
+x = 0.0078125
+y = -0.1416015625
+
+[char_data.".".tex_rect.end]
+x = 0.0263671875
+y = -0.1220703125
+
+[char_data.".".tex_rect.start_uv]
+x = 0.3505859375
+y = 0.916015625
+
+[char_data.".".tex_rect.end_uv]
+x = 0.369140625
+y = 0.896484375
+
+[char_data.";"]
+advance = 0.03125
+
+[char_data.";".tex_rect.start]
+x = 0.0048828125
+y = -0.1650390625
+
+[char_data.";".tex_rect.end]
+x = 0.0283203125
+y = -0.052734375
+
+[char_data.";".tex_rect.start_uv]
+x = 0.576171875
+y = 0.7939453125
+
+[char_data.";".tex_rect.end_uv]
+x = 0.599609375
+y = 0.681640625
+
+[char_data.V]
+advance = 0.1123046875
+
+[char_data.V.tex_rect.start]
+x = 0.0009765625
+y = -0.138671875
+
+[char_data.V.tex_rect.end]
+x = 0.111328125
+y = -0.0146484375
+
+[char_data.V.tex_rect.start_uv]
+x = 0.626953125
+y = 0.5556640625
+
+[char_data.V.tex_rect.end_uv]
+x = 0.7373046875
+y = 0.431640625
+
+[char_data.":"]
+advance = 0.0302734375
+
+[char_data.":".tex_rect.start]
+x = 0.0048828125
+y = -0.1416015625
+
+[char_data.":".tex_rect.end]
+x = 0.0244140625
+y = -0.052734375
+
+[char_data.":".tex_rect.start_uv]
+x = 0.173828125
+y = 0.8955078125
+
+[char_data.":".tex_rect.end_uv]
+x = 0.193359375
+y = 0.806640625
+
+[char_data.F]
+advance = 0.09765625
+
+[char_data.F.tex_rect.start]
+x = 0.005859375
+y = -0.138671875
+
+[char_data.F.tex_rect.end]
+x = 0.0927734375
+y = -0.0146484375
+
+[char_data.F.tex_rect.start_uv]
+x = 0.0888671875
+y = 0.8056640625
+
+[char_data.F.tex_rect.end_uv]
+x = 0.17578125
+y = 0.681640625
+
+[char_data.">"]
+advance = 0.0859375
+
+[char_data.">".tex_rect.start]
+x = 0.005859375
+y = -0.12890625
+
+[char_data.">".tex_rect.end]
+x = 0.080078125
+y = -0.0380859375
+
+[char_data.">".tex_rect.start_uv]
+x = 0.6005859375
+y = 0.7724609375
+
+[char_data.">".tex_rect.end_uv]
+x = 0.6748046875
+y = 0.681640625
+
+[char_data._]
+advance = 0.0732421875
+
+[char_data._.tex_rect.start]
+x = -0.0068359375
+y = -0.1513671875
+
+[char_data._.tex_rect.end]
+x = 0.08203125
+y = -0.138671875
+
+[char_data._.tex_rect.start_uv]
+x = 0.4208984375
+y = 0.9091796875
+
+[char_data._.tex_rect.end_uv]
+x = 0.509765625
+y = 0.896484375
+
+[char_data.c]
+advance = 0.09375
+
+[char_data.c.tex_rect.start]
+x = 0.0087890625
+y = -0.1396484375
+
+[char_data.c.tex_rect.end]
+x = 0.0859375
+y = -0.05078125
+
+[char_data.c.tex_rect.start_uv]
+x = 0.8232421875
+y = 0.7705078125
+
+[char_data.c.tex_rect.end_uv]
+x = 0.900390625
+y = 0.681640625
+
+[char_data.")"]
+advance = 0.0400390625
+
+[char_data.")".tex_rect.start]
+x = 0.0009765625
+y = -0.17578125
+
+[char_data.")".tex_rect.end]
+x = 0.0322265625
+y = -0.0146484375
+
+[char_data.")".tex_rect.start_uv]
+x = 0.080078125
+y = 0.162109375
+
+[char_data.")".tex_rect.end_uv]
+x = 0.111328125
+y = 0.0009765625
+
+[char_data.n]
+advance = 0.1064453125
+
+[char_data.n.tex_rect.start]
+x = 0.013671875
+y = -0.138671875
+
+[char_data.n.tex_rect.end]
+x = 0.0947265625
+y = -0.05078125
+
+[char_data.n.tex_rect.start_uv]
+x = 0.3369140625
+y = 0.89453125
+
+[char_data.n.tex_rect.end_uv]
+x = 0.41796875
+y = 0.806640625
+
+[char_data.p]
+advance = 0.111328125
+
+[char_data.p.tex_rect.start]
+x = 0.013671875
+y = -0.17578125
+
+[char_data.p.tex_rect.end]
+x = 0.1025390625
+y = -0.05078125
+
+[char_data.p.tex_rect.start_uv]
+x = 0.0009765625
+y = 0.4306640625
+
+[char_data.p.tex_rect.end_uv]
+x = 0.08984375
+y = 0.3056640625
+
+[char_data.D]
+advance = 0.12109375
+
+[char_data.D.tex_rect.start]
+x = 0.015625
+y = -0.138671875
+
+[char_data.D.tex_rect.end]
+x = 0.1123046875
+y = -0.0146484375
+
+[char_data.D.tex_rect.start_uv]
+x = 0.8125
+y = 0.6806640625
+
+[char_data.D.tex_rect.end_uv]
+x = 0.9091796875
+y = 0.556640625
+
+[char_data.a]
+advance = 0.1064453125
+
+[char_data.a.tex_rect.start]
+x = 0.0087890625
+y = -0.1396484375
+
+[char_data.a.tex_rect.end]
+x = 0.09765625
+y = -0.05078125
+
+[char_data.a.tex_rect.start_uv]
+x = 0.9013671875
+y = 0.7705078125
+
+[char_data.a.tex_rect.end_uv]
+x = 0.990234375
+y = 0.681640625
+
+[char_data.I]
+advance = 0.04296875
+
+[char_data.I.tex_rect.start]
+x = 0.015625
+y = -0.138671875
+
+[char_data.I.tex_rect.end]
+x = 0.0283203125
+y = -0.0146484375
+
+[char_data.I.tex_rect.start_uv]
+x = 0.2998046875
+y = 0.8056640625
+
+[char_data.I.tex_rect.end_uv]
+x = 0.3125
+y = 0.681640625
+
+[char_data."="]
+advance = 0.080078125
+
+[char_data."=".tex_rect.start]
+x = 0.005859375
+y = -0.1083984375
+
+[char_data."=".tex_rect.end]
+x = 0.07421875
+y = -0.0576171875
+
+[char_data."=".tex_rect.start_uv]
+x = 0.064453125
+y = 0.947265625
+
+[char_data."=".tex_rect.end_uv]
+x = 0.1328125
+y = 0.896484375
+
+[char_data.r]
+advance = 0.0712890625
+
+[char_data.r.tex_rect.start]
+x = 0.013671875
+y = -0.138671875
+
+[char_data.r.tex_rect.end]
+x = 0.0693359375
+y = -0.05078125
+
+[char_data.r.tex_rect.start_uv]
+x = 0.2802734375
+y = 0.89453125
+
+[char_data.r.tex_rect.end_uv]
+x = 0.3359375
+y = 0.806640625
+
+[char_data.o]
+advance = 0.1064453125
+
+[char_data.o.tex_rect.start]
+x = 0.0087890625
+y = -0.1396484375
+
+[char_data.o.tex_rect.end]
+x = 0.09765625
+y = -0.05078125
+
+[char_data.o.tex_rect.start_uv]
+x = 0.0009765625
+y = 0.8955078125
+
+[char_data.o.tex_rect.end_uv]
+x = 0.08984375
+y = 0.806640625
+
+[char_data."("]
+advance = 0.0400390625
+
+[char_data."(".tex_rect.start]
+x = 0.0078125
+y = -0.17578125
+
+[char_data."(".tex_rect.end]
+x = 0.0390625
+y = -0.0146484375
+
+[char_data."(".tex_rect.start_uv]
+x = 0.0478515625
+y = 0.162109375
+
+[char_data."(".tex_rect.end_uv]
+x = 0.0791015625
+y = 0.0009765625
+
+[char_data.e]
+advance = 0.0966796875
+
+[char_data.e.tex_rect.start]
+x = 0.0087890625
+y = -0.1396484375
+
+[char_data.e.tex_rect.end]
+x = 0.0908203125
+y = -0.05078125
+
+[char_data.e.tex_rect.start_uv]
+x = 0.0908203125
+y = 0.8955078125
+
+[char_data.e.tex_rect.end_uv]
+x = 0.1728515625
+y = 0.806640625
+
+[char_data."^"]
+advance = 0.0732421875
+
+[char_data."^".tex_rect.start]
+x = 0.005859375
+y = -0.0654296875
+
+[char_data."^".tex_rect.end]
+x = 0.068359375
+y = -0.0146484375
+
+[char_data."^".tex_rect.start_uv]
+x = 0.0009765625
+y = 0.947265625
+
+[char_data."^".tex_rect.end_uv]
+x = 0.0634765625
+y = 0.896484375
+
+[char_data.N]
+advance = 0.1298828125
+
+[char_data.N.tex_rect.start]
+x = 0.015625
+y = -0.138671875
+
+[char_data.N.tex_rect.end]
+x = 0.115234375
+y = -0.0146484375
+
+[char_data.N.tex_rect.start_uv]
+x = 0.8271484375
+y = 0.4296875
+
+[char_data.N.tex_rect.end_uv]
+x = 0.9267578125
+y = 0.3056640625
+
+[char_data.S]
+advance = 0.103515625
+
+[char_data.S.tex_rect.start]
+x = 0.0087890625
+y = -0.140625
+
+[char_data.S.tex_rect.end]
+x = 0.0947265625
+y = -0.013671875
+
+[char_data.S.tex_rect.start_uv]
+x = 0.359375
+y = 0.3046875
+
+[char_data.S.tex_rect.end_uv]
+x = 0.4453125
+y = 0.177734375
+
+[char_data.","]
+advance = 0.03515625
+
+[char_data.",".tex_rect.start]
+x = 0.0078125
+y = -0.1650390625
+
+[char_data.",".tex_rect.end]
+x = 0.0283203125
+y = -0.1220703125
+
+[char_data.",".tex_rect.start_uv]
+x = 0.1826171875
+y = 0.939453125
+
+[char_data.",".tex_rect.end_uv]
+x = 0.203125
+y = 0.896484375
+
+[char_data.5]
+advance = 0.0986328125
+
+[char_data.5.tex_rect.start]
+x = 0.009765625
+y = -0.138671875
+
+[char_data.5.tex_rect.end]
+x = 0.0908203125
+y = -0.0146484375
+
+[char_data.5.tex_rect.start_uv]
+x = 0.0009765625
+y = 0.5556640625
+
+[char_data.5.tex_rect.end_uv]
+x = 0.08203125
+y = 0.431640625
+
+[char_data."|"]
+advance = 0.0615234375
+
+[char_data."|".tex_rect.start]
+x = 0.0244140625
+y = -0.17578125
+
+[char_data."|".tex_rect.end]
+x = 0.037109375
+y = -0.0146484375
+
+[char_data."|".tex_rect.start_uv]
+x = 0.4033203125
+y = 0.162109375
+
+[char_data."|".tex_rect.end_uv]
+x = 0.416015625
+y = 0.0009765625
+
+[char_data.g]
+advance = 0.1064453125
+
+[char_data.g.tex_rect.start]
+x = 0.0087890625
+y = -0.1728515625
+
+[char_data.g.tex_rect.end]
+x = 0.09765625
+y = -0.05078125
+
+[char_data.g.tex_rect.start_uv]
+x = 0.41015625
+y = 0.8037109375
+
+[char_data.g.tex_rect.end_uv]
+x = 0.4990234375
+y = 0.681640625
+
+[char_data.W]
+advance = 0.1474609375
+
+[char_data.W.tex_rect.start]
+x = 0.001953125
+y = -0.138671875
+
+[char_data.W.tex_rect.end]
+x = 0.1455078125
+y = -0.0146484375
+
+[char_data.W.tex_rect.start_uv]
+x = 0.73828125
+y = 0.5556640625
+
+[char_data.W.tex_rect.end_uv]
+x = 0.8818359375
+y = 0.431640625
+
+[char_data.s]
+advance = 0.0849609375
+
+[char_data.s.tex_rect.start]
+x = 0.0078125
+y = -0.1396484375
+
+[char_data.s.tex_rect.end]
+x = 0.0791015625
+y = -0.05078125
+
+[char_data.s.tex_rect.start_uv]
+x = 0.7509765625
+y = 0.7705078125
+
+[char_data.s.tex_rect.end_uv]
+x = 0.822265625
+y = 0.681640625
+
+[char_data."'"]
+advance = 0.0244140625
+
+[char_data."'".tex_rect.start]
+x = 0.005859375
+y = -0.0498046875
+
+[char_data."'".tex_rect.end]
+x = 0.01953125
+y = -0.0146484375
+
+[char_data."'".tex_rect.start_uv]
+x = 0.2373046875
+y = 0.931640625
+
+[char_data."'".tex_rect.end_uv]
+x = 0.2509765625
+y = 0.896484375
+
+[char_data.b]
+advance = 0.111328125
+
+[char_data.b.tex_rect.start]
+x = 0.013671875
+y = -0.1396484375
+
+[char_data.b.tex_rect.end]
+x = 0.1025390625
+y = -0.0146484375
+
+[char_data.b.tex_rect.start_uv]
+x = 0.255859375
+y = 0.4306640625
+
+[char_data.b.tex_rect.end_uv]
+x = 0.3447265625
+y = 0.3056640625
+
+[char_data.Z]
+advance = 0.11328125
+
+[char_data.Z.tex_rect.start]
+x = 0.005859375
+y = -0.138671875
+
+[char_data.Z.tex_rect.end]
+x = 0.1083984375
+y = -0.0146484375
+
+[char_data.Z.tex_rect.start_uv]
+x = 0.1064453125
+y = 0.6806640625
+
+[char_data.Z.tex_rect.end_uv]
+x = 0.208984375
+y = 0.556640625
+
+[char_data.'"']
+advance = 0.04296875
+
+[char_data.'"'.tex_rect.start]
+x = 0.005859375
+y = -0.0498046875
+
+[char_data.'"'.tex_rect.end]
+x = 0.0380859375
+y = -0.0146484375
+
+[char_data.'"'.tex_rect.start_uv]
+x = 0.2041015625
+y = 0.931640625
+
+[char_data.'"'.tex_rect.end_uv]
+x = 0.236328125
+y = 0.896484375
+
+[char_data.'\']
+advance = 0.0732421875
+
+[char_data.'\'.tex_rect.start]
+x = 0.005859375
+y = -0.1513671875
+
+[char_data.'\'.tex_rect.end]
+x = 0.068359375
+y = -0.0146484375
+
+[char_data.'\'.tex_rect.start_uv]
+x = 0.5986328125
+y = 0.1376953125
+
+[char_data.'\'.tex_rect.end_uv]
+x = 0.6611328125
+y = 0.0009765625
+
+[char_data.6]
+advance = 0.0908203125
+
+[char_data.6.tex_rect.start]
+x = 0.009765625
+y = -0.138671875
+
+[char_data.6.tex_rect.end]
+x = 0.0849609375
+y = -0.0146484375
+
+[char_data.6.tex_rect.start_uv]
+x = 0.162109375
+y = 0.5556640625
+
+[char_data.6.tex_rect.end_uv]
+x = 0.2373046875
+y = 0.431640625
+
+[char_data."{"]
+advance = 0.0595703125
+
+[char_data."{".tex_rect.start]
+x = 0.0078125
+y = -0.17578125
+
+[char_data."{".tex_rect.end]
+x = 0.0576171875
+y = -0.0146484375
+
+[char_data."{".tex_rect.start_uv]
+x = 0.3525390625
+y = 0.162109375
+
+[char_data."{".tex_rect.end_uv]
+x = 0.40234375
+y = 0.0009765625
+
+[char_data.j]
+advance = 0.044921875
+
+[char_data.j.tex_rect.start]
+x = -0.015625
+y = -0.17578125
+
+[char_data.j.tex_rect.end]
+x = 0.03125
+y = -0.0185546875
+
+[char_data.j.tex_rect.start_uv]
+x = 0.4677734375
+y = 0.158203125
+
+[char_data.j.tex_rect.end_uv]
+x = 0.5146484375
+y = 0.0009765625
+
+[char_data."["]
+advance = 0.046875
+
+[char_data."[".tex_rect.start]
+x = 0.009765625
+y = -0.17578125
+
+[char_data."[".tex_rect.end]
+x = 0.0478515625
+y = -0.0146484375
+
+[char_data."[".tex_rect.start_uv]
+x = 0.2744140625
+y = 0.162109375
+
+[char_data."[".tex_rect.end_uv]
+x = 0.3125
+y = 0.0009765625
+
+[char_data."~"]
+advance = 0.0732421875
+
+[char_data."~".tex_rect.start]
+x = 0.0048828125
+y = -0.0908203125
+
+[char_data."~".tex_rect.end]
+x = 0.0703125
+y = -0.0703125
+
+[char_data."~".tex_rect.start_uv]
+x = 0.2841796875
+y = 0.9169921875
+
+[char_data."~".tex_rect.end_uv]
+x = 0.349609375
+y = 0.896484375
+
+[char_data.K]
+advance = 0.1025390625
+
+[char_data.K.tex_rect.start]
+x = 0.015625
+y = -0.138671875
+
+[char_data.K.tex_rect.end]
+x = 0.0986328125
+y = -0.0146484375
+
+[char_data.K.tex_rect.start_uv]
+x = 0.5361328125
+y = 0.4296875
+
+[char_data.K.tex_rect.end_uv]
+x = 0.619140625
+y = 0.3056640625
+
+[char_data.x]
+advance = 0.0859375
+
+[char_data.x.tex_rect.start]
+x = 0.00390625
+y = -0.138671875
+
+[char_data.x.tex_rect.end]
+x = 0.0830078125
+y = -0.0517578125
+
+[char_data.x.tex_rect.start_uv]
+x = 0.625
+y = 0.8935546875
+
+[char_data.x.tex_rect.end_uv]
+x = 0.7041015625
+y = 0.806640625
+
+[char_data."/"]
+advance = 0.0732421875
+
+[char_data."/".tex_rect.start]
+x = 0.0048828125
+y = -0.1513671875
+
+[char_data."/".tex_rect.end]
+x = 0.0693359375
+y = -0.0146484375
+
+[char_data."/".tex_rect.start_uv]
+x = 0.662109375
+y = 0.1376953125
+
+[char_data."/".tex_rect.end_uv]
+x = 0.7265625
+y = 0.0009765625
+
+[char_data.H]
+advance = 0.1328125
+
+[char_data.H.tex_rect.start]
+x = 0.015625
+y = -0.138671875
+
+[char_data.H.tex_rect.end]
+x = 0.1181640625
+y = -0.0146484375
+
+[char_data.H.tex_rect.start_uv]
+x = 0.1962890625
+y = 0.8056640625
+
+[char_data.H.tex_rect.end_uv]
+x = 0.298828125
+y = 0.681640625
+
+[char_data.P]
+advance = 0.095703125
+
+[char_data.P.tex_rect.start]
+x = 0.015625
+y = -0.138671875
+
+[char_data.P.tex_rect.end]
+x = 0.09375
+y = -0.0146484375
+
+[char_data.P.tex_rect.start_uv]
+x = 0.0830078125
+y = 0.5556640625
+
+[char_data.P.tex_rect.end_uv]
+x = 0.1611328125
+y = 0.431640625
+
+[char_data.d]
+advance = 0.111328125
+
+[char_data.d.tex_rect.start]
+x = 0.0087890625
+y = -0.1396484375
+
+[char_data.d.tex_rect.end]
+x = 0.09765625
+y = -0.0146484375
+
+[char_data.d.tex_rect.start_uv]
+x = 0.345703125
+y = 0.4306640625
+
+[char_data.d.tex_rect.end_uv]
+x = 0.4345703125
+y = 0.3056640625
+
+[char_data.T]
+advance = 0.1025390625
+
+[char_data.T.tex_rect.start]
+x = 0.001953125
+y = -0.138671875
+
+[char_data.T.tex_rect.end]
+x = 0.1015625
+y = -0.0146484375
+
+[char_data.T.tex_rect.start_uv]
+x = 0.3984375
+y = 0.5556640625
+
+[char_data.T.tex_rect.end_uv]
+x = 0.498046875
+y = 0.431640625
+
+[char_data.-]
+advance = 0.0615234375
+
+[char_data.-.tex_rect.start]
+x = 0.005859375
+y = -0.1025390625
+
+[char_data.-.tex_rect.end]
+x = 0.0556640625
+y = -0.0888671875
+
+[char_data.-.tex_rect.start_uv]
+x = 0.3701171875
+y = 0.91015625
+
+[char_data.-.tex_rect.end_uv]
+x = 0.419921875
+y = 0.896484375
+
+[char_data." "]
+advance = 0.0458984375
+
+[char_data." ".tex_rect.start]
+x = 0.0
+y = -0.17578125
+
+[char_data." ".tex_rect.end]
+x = 0.0458984375
+y = -0.0
+
+[char_data." ".tex_rect.start_uv]
+x = 0.0009765625
+y = 0.1767578125
+
+[char_data." ".tex_rect.end_uv]
+x = 0.046875
+y = 0.0009765625
+
+[char_data."<"]
+advance = 0.0859375
+
+[char_data."<".tex_rect.start]
+x = 0.005859375
+y = -0.12890625
+
+[char_data."<".tex_rect.end]
+x = 0.080078125
+y = -0.0380859375
+
+[char_data."<".tex_rect.start_uv]
+x = 0.67578125
+y = 0.7724609375
+
+[char_data."<".tex_rect.end_uv]
+x = 0.75
+y = 0.681640625
+
+[char_data.v]
+advance = 0.0869140625
+
+[char_data.v.tex_rect.start]
+x = 0.0009765625
+y = -0.138671875
+
+[char_data.v.tex_rect.end]
+x = 0.0859375
+y = -0.05078125
+
+[char_data.v.tex_rect.start_uv]
+x = 0.1943359375
+y = 0.89453125
+
+[char_data.v.tex_rect.end_uv]
+x = 0.279296875
+y = 0.806640625
+
+[char_data.4]
+advance = 0.1015625
+
+[char_data.4.tex_rect.start]
+x = 0.0
+y = -0.138671875
+
+[char_data.4.tex_rect.end]
+x = 0.095703125
+y = -0.0146484375
+
+[char_data.4.tex_rect.start_uv]
+x = 0.3134765625
+y = 0.8056640625
+
+[char_data.4.tex_rect.end_uv]
+x = 0.4091796875
+y = 0.681640625
+
+[char_data.k]
+advance = 0.08984375
+
+[char_data.k.tex_rect.start]
+x = 0.013671875
+y = -0.140625
+
+[char_data.k.tex_rect.end]
+x = 0.08203125
+y = -0.0146484375
+
+[char_data.k.tex_rect.start_uv]
+x = 0.7822265625
+y = 0.3037109375
+
+[char_data.k.tex_rect.end_uv]
+x = 0.8505859375
+y = 0.177734375
+
+[char_data."?"]
+advance = 0.0859375
+
+[char_data."?".tex_rect.start]
+x = 0.005859375
+y = -0.138671875
+
+[char_data."?".tex_rect.end]
+x = 0.080078125
+y = -0.0126953125
+
+[char_data."?".tex_rect.start_uv]
+x = 0.6318359375
+y = 0.3037109375
+
+[char_data."?".tex_rect.end_uv]
+x = 0.7060546875
+y = 0.177734375
+
+[char_data.y]
+advance = 0.0859375
+
+[char_data.y.tex_rect.start]
+x = 0.001953125
+y = -0.1767578125
+
+[char_data.y.tex_rect.end]
+x = 0.0869140625
+y = -0.05078125
+
+[char_data.y.tex_rect.start_uv]
+x = 0.5458984375
+y = 0.3037109375
+
+[char_data.y.tex_rect.end_uv]
+x = 0.630859375
+y = 0.177734375
+
+[char_data."%"]
+advance = 0.134765625
+
+[char_data."%".tex_rect.start]
+x = 0.0048828125
+y = -0.138671875
+
+[char_data."%".tex_rect.end]
+x = 0.1318359375
+y = -0.0146484375
+
+[char_data."%".tex_rect.start_uv]
+x = 0.4990234375
+y = 0.5556640625
+
+[char_data."%".tex_rect.end_uv]
+x = 0.6259765625
+y = 0.431640625
+
+[char_data."#"]
+advance = 0.11328125
+
+[char_data."#".tex_rect.start]
+x = 0.0078125
+y = -0.138671875
+
+[char_data."#".tex_rect.end]
+x = 0.107421875
+y = -0.013671875
+
+[char_data."#".tex_rect.start_uv]
+x = 0.435546875
+y = 0.4306640625
+
+[char_data."#".tex_rect.end_uv]
+x = 0.53515625
+y = 0.3056640625
+
+[char_data.M]
+advance = 0.154296875
+
+[char_data.M.tex_rect.start]
+x = 0.015625
+y = -0.138671875
+
+[char_data.M.tex_rect.end]
+x = 0.1396484375
+y = -0.0146484375
+
+[char_data.M.tex_rect.start_uv]
+x = 0.7021484375
+y = 0.4296875
+
+[char_data.M.tex_rect.end_uv]
+x = 0.826171875
+y = 0.3056640625
+
+[char_data."}"]
+advance = 0.0595703125
+
+[char_data."}".tex_rect.start]
+x = 0.001953125
+y = -0.17578125
+
+[char_data."}".tex_rect.end]
+x = 0.0517578125
+y = -0.0146484375
+
+[char_data."}".tex_rect.start_uv]
+x = 0.4169921875
+y = 0.162109375
+
+[char_data."}".tex_rect.end_uv]
+x = 0.466796875
+y = 0.0009765625
+
+[char_data.1]
+advance = 0.0595703125
+
+[char_data.1.tex_rect.start]
+x = 0.005859375
+y = -0.138671875
+
+[char_data.1.tex_rect.end]
+x = 0.0439453125
+y = -0.0146484375
+
+[char_data.1.tex_rect.start_uv]
+x = 0.361328125
+y = 0.6806640625
+
+[char_data.1.tex_rect.end_uv]
+x = 0.3994140625
+y = 0.556640625
+
+[char_data.0]
+advance = 0.08984375
+
+[char_data.0.tex_rect.start]
+x = 0.0078125
+y = -0.138671875
+
+[char_data.0.tex_rect.end]
+x = 0.0830078125
+y = -0.0146484375
+
+[char_data.0.tex_rect.start_uv]
+x = 0.28515625
+y = 0.6806640625
+
+[char_data.0.tex_rect.end_uv]
+x = 0.3603515625
+y = 0.556640625
+
+[char_data."+"]
+advance = 0.0859375
+
+[char_data."+".tex_rect.start]
+x = 0.005859375
+y = -0.12109375
+
+[char_data."+".tex_rect.end]
+x = 0.080078125
+y = -0.0458984375
+
+[char_data."+".tex_rect.start_uv]
+x = 0.8916015625
+y = 0.8818359375
+
+[char_data."+".tex_rect.end_uv]
+x = 0.9658203125
+y = 0.806640625
+
+[char_data.7]
+advance = 0.0888671875
+
+[char_data.7.tex_rect.start]
+x = 0.0068359375
+y = -0.138671875
+
+[char_data.7.tex_rect.end]
+x = 0.083984375
+y = -0.0146484375
+
+[char_data.7.tex_rect.start_uv]
+x = 0.3203125
+y = 0.5556640625
+
+[char_data.7.tex_rect.end_uv]
+x = 0.3974609375
+y = 0.431640625
+
+[char_data.h]
+advance = 0.1064453125
+
+[char_data.h.tex_rect.start]
+x = 0.013671875
+y = -0.138671875
+
+[char_data.h.tex_rect.end]
+x = 0.0947265625
+y = -0.0146484375
+
+[char_data.h.tex_rect.start_uv]
+x = 0.654296875
+y = 0.6806640625
+
+[char_data.h.tex_rect.end_uv]
+x = 0.7353515625
+y = 0.556640625
+
+[char_data.B]
+advance = 0.109375
+
+[char_data.B.tex_rect.start]
+x = 0.015625
+y = -0.138671875
+
+[char_data.B.tex_rect.end]
+x = 0.1015625
+y = -0.0146484375
+
+[char_data.B.tex_rect.start_uv]
+x = 0.5107421875
+y = 0.6806640625
+
+[char_data.B.tex_rect.end_uv]
+x = 0.5966796875
+y = 0.556640625
+
+[char_data.9]
+advance = 0.0908203125
+
+[char_data.9.tex_rect.start]
+x = 0.0068359375
+y = -0.138671875
+
+[char_data.9.tex_rect.end]
+x = 0.0810546875
+y = -0.0146484375
+
+[char_data.9.tex_rect.start_uv]
+x = 0.2099609375
+y = 0.6806640625
+
+[char_data.9.tex_rect.end_uv]
+x = 0.2841796875
+y = 0.556640625
+
+[char_data.L]
+advance = 0.099609375
+
+[char_data.L.tex_rect.start]
+x = 0.015625
+y = -0.138671875
+
+[char_data.L.tex_rect.end]
+x = 0.0966796875
+y = -0.0146484375
+
+[char_data.L.tex_rect.start_uv]
+x = 0.6201171875
+y = 0.4296875
+
+[char_data.L.tex_rect.end_uv]
+x = 0.701171875
+y = 0.3056640625
+
+[char_data."]"]
+advance = 0.046875
+
+[char_data."]".tex_rect.start]
+x = 0.0
+y = -0.17578125
+
+[char_data."]".tex_rect.end]
+x = 0.0380859375
+y = -0.0146484375
+
+[char_data."]".tex_rect.start_uv]
+x = 0.3134765625
+y = 0.162109375
+
+[char_data."]".tex_rect.end_uv]
+x = 0.3515625
+y = 0.0009765625
+
+[char_data.i]
+advance = 0.044921875
+
+[char_data.i.tex_rect.start]
+x = 0.013671875
+y = -0.138671875
+
+[char_data.i.tex_rect.end]
+x = 0.0322265625
+y = -0.0185546875
+
+[char_data.i.tex_rect.start_uv]
+x = 0.5
+y = 0.8017578125
+
+[char_data.i.tex_rect.end_uv]
+x = 0.5185546875
+y = 0.681640625
+
+[char_data.3]
+advance = 0.091796875
+
+[char_data.3.tex_rect.start]
+x = 0.0078125
+y = -0.1396484375
+
+[char_data.3.tex_rect.end]
+x = 0.0859375
+y = -0.0146484375
+
+[char_data.3.tex_rect.start_uv]
+x = 0.8515625
+y = 0.302734375
+
+[char_data.3.tex_rect.end_uv]
+x = 0.9296875
+y = 0.177734375
+
+[char_data.Y]
+advance = 0.1015625
+
+[char_data.Y.tex_rect.start]
+x = -0.0009765625
+y = -0.138671875
+
+[char_data.Y.tex_rect.end]
+x = 0.103515625
+y = -0.0146484375
+
+[char_data.Y.tex_rect.start_uv]
+x = 0.0009765625
+y = 0.6806640625
+
+[char_data.Y.tex_rect.end_uv]
+x = 0.10546875
+y = 0.556640625
+
+[char_data.A]
+advance = 0.1103515625
+
+[char_data.A.tex_rect.start]
+x = 0.0009765625
+y = -0.138671875
+
+[char_data.A.tex_rect.end]
+x = 0.1103515625
+y = -0.0146484375
+
+[char_data.A.tex_rect.start_uv]
+x = 0.400390625
+y = 0.6806640625
+
+[char_data.A.tex_rect.end_uv]
+x = 0.509765625
+y = 0.556640625
+
+[char_data."`"]
+advance = 0.04296875
+
+[char_data."`".tex_rect.start]
+x = 0.005859375
+y = -0.0458984375
+
+[char_data."`".tex_rect.end]
+x = 0.037109375
+y = -0.0146484375
+
+[char_data."`".tex_rect.start_uv]
+x = 0.251953125
+y = 0.927734375
+
+[char_data."`".tex_rect.end_uv]
+x = 0.283203125
+y = 0.896484375
+
+[char_data."&"]
+advance = 0.11328125
+
+[char_data."&".tex_rect.start]
+x = 0.0068359375
+y = -0.140625
+
+[char_data."&".tex_rect.end]
+x = 0.1083984375
+y = -0.013671875
+
+[char_data."&".tex_rect.start_uv]
+x = 0.7275390625
+y = 0.1279296875
+
+[char_data."&".tex_rect.end_uv]
+x = 0.8291015625
+y = 0.0009765625
+
+[char_data."*"]
+advance = 0.0595703125
+
+[char_data."*".tex_rect.start]
+x = 0.0068359375
+y = -0.0615234375
+
+[char_data."*".tex_rect.end]
+x = 0.0546875
+y = -0.0146484375
+
+[char_data."*".tex_rect.start_uv]
+x = 0.1337890625
+y = 0.943359375
+
+[char_data."*".tex_rect.end_uv]
+x = 0.181640625
+y = 0.896484375
+
+[char_data.U]
+advance = 0.12890625
+
+[char_data.U.tex_rect.start]
+x = 0.015625
+y = -0.1416015625
+
+[char_data.U.tex_rect.end]
+x = 0.1142578125
+y = -0.0146484375
+
+[char_data.U.tex_rect.start_uv]
+x = 0.4462890625
+y = 0.3046875
+
+[char_data.U.tex_rect.end_uv]
+x = 0.544921875
+y = 0.177734375
+
+[char_data.t]
+advance = 0.0625
+
+[char_data.t.tex_rect.start]
+x = 0.0029296875
+y = -0.138671875
+
+[char_data.t.tex_rect.end]
+x = 0.05859375
+y = -0.0244140625
+
+[char_data.t.tex_rect.start_uv]
+x = 0.51953125
+y = 0.7958984375
+
+[char_data.t.tex_rect.end_uv]
+x = 0.5751953125
+y = 0.681640625
+
+[char_data.Q]
+advance = 0.14453125
+
+[char_data.Q.tex_rect.start]
+x = 0.009765625
+y = -0.140625
+
+[char_data.Q.tex_rect.end]
+x = 0.1357421875
+y = -0.013671875
+
+[char_data.Q.tex_rect.start_uv]
+x = 0.232421875
+y = 0.3046875
+
+[char_data.Q.tex_rect.end_uv]
+x = 0.3583984375
+y = 0.177734375
+
+[char_data.G]
+advance = 0.1201171875
+
+[char_data.G.tex_rect.start]
+x = 0.009765625
+y = -0.140625
+
+[char_data.G.tex_rect.end]
+x = 0.11328125
+y = -0.013671875
+
+[char_data.G.tex_rect.start_uv]
+x = 0.0009765625
+y = 0.3046875
+
+[char_data.G.tex_rect.end_uv]
+x = 0.1044921875
+y = 0.177734375
